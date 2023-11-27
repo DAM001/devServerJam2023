@@ -10,7 +10,8 @@ draw_sprite_stretched(
 for (var i = 0; i < item_inventory_length; i += 1)
 {
     var xx = x + i * 16 * 2;
-	draw_sprite_ext(sSlot, 0, xx, y, 2, 2, 0, c_white, 1);
+	var is_highlighted = (i == item_inventory_selected) ? 1 : 0;
+	draw_sprite_ext(sSlot, is_highlighted, xx, y, 2, 2, 0, c_white, 1);
     
     if (item_inventory[i] != -1 && array_length(item_sprites) > 0)
     {

@@ -18,12 +18,12 @@ if (instance_exists(player) && equipped) {
         case 2: // Facing down
             offset_x = 20;
             offset_y = 24;
-            scale_x = -1.5;
+            scale_x = -2;
             break;
         case 3: // Facing up
             offset_x = 40;
             offset_y = 20;
-            scale_x = 1.5;
+            scale_x = 2;
             break;
     }
 

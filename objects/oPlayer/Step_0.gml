@@ -50,8 +50,12 @@ if (_xinput == 0 && _yinput == 0)
 }
 
 // --------- ITEM HANDLING ---------
-/*if (keyboard_check_pressed(ord("G"))) {
+if (keyboard_check_pressed(ord("F"))) {
+	if (item_inventory[item_inventory_selected] >= 0) {
+		item_inventory[item_inventory_selected] = -1;
 
+		item_inventory_active.equipped = false;
+	}
 }
 
 if (keyboard_check_pressed(ord("E"))) {
@@ -62,11 +66,47 @@ if (keyboard_check_pressed(ord("E"))) {
         var distance = point_distance(x - 32, y - 32, other.x, other.y);
         
         if (nearestItem == noone || distance < nearestDistance) {
-            nearestItem = id;
-            nearestDistance = distance;
+			nearestItem = id;
+			nearestDistance = distance;
         }
     }
-    
 	
-	nearestItem.equipped = true;
-}*/
+	for (var i = 0; i < item_inventory_length; i += 1) {
+		
+	}
+
+	if (item_inventory[item_inventory_selected] == -1 && !nearestItem.equipped) {
+		item_inventory[item_inventory_selected] = nearestItem.item_index;
+		item_inventory_items[item_inventory_selected] = nearestItem;
+		
+		nearestItem.equipped = true;
+		change_active_inventory(item_inventory_selected);
+	}
+}
+
+// Change active inventory slot
+
+change_active_inventory = function (active_index)
+{
+	item_inventory_selected = active_index;
+	
+	if (item_inventory[active_index] >= 0) {
+		item_inventory_active = item_inventory_items[active_index];
+	}
+	
+	for (var i = 0; i < item_inventory_length; i += 1) {
+		if (item_inventory[i] >= 0) {
+			if (i == item_inventory_selected) {
+				instance_activate_object(item_inventory_items[i]);
+			} else {
+				instance_deactivate_object(item_inventory_items[i]);
+			}
+		}
+	}
+}
+
+for (var i = 0; i < item_inventory_length; i += 1) {
+	if (keyboard_check_pressed(ord(i + 1))) {
+		change_active_inventory(i);
+	}
+}

@@ -6,3 +6,5 @@ item_description = "";
 
 image_xscale = 2;
 image_yscale = 2;
+
+item_index = item_rock;
