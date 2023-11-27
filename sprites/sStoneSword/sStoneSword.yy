@@ -1,10 +1,10 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "Sprite37",
-  "bbox_bottom": 0,
+  "name": "sStoneSword",
+  "bbox_bottom": 7,
   "bbox_left": 0,
-  "bbox_right": 0,
+  "bbox_right": 7,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e42fa52a-3768-4750-bfb6-5c5d6adb39fd",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d8d2e37f-6d8b-44be-aa7b-57e5e6395433",},
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 64,
+  "height": 8,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"36767644-e325-4246-95d8-801f594aefd5","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"9d5887ea-a5e5-446e-9aee-7cc8a7768082","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
@@ -32,7 +32,7 @@
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "Sprite37",
+    "name": "sStoneSword",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e42fa52a-3768-4750-bfb6-5c5d6adb39fd","path":"sprites/Sprite37/Sprite37.yy",},},},"Disabled":false,"id":"323c51a6-0a93-4f70-8b05-c43e89880821","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d8d2e37f-6d8b-44be-aa7b-57e5e6395433","path":"sprites/sStoneSword/sStoneSword.yy",},},},"Disabled":false,"id":"340b2285-a501-4823-bf56-3dae2fc27bb3","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 64,
+  "width": 8,
 }

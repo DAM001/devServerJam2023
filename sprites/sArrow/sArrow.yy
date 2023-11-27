@@ -2,9 +2,9 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "sArrow",
-  "bbox_bottom": 0,
+  "bbox_bottom": 7,
   "bbox_left": 0,
-  "bbox_right": 0,
+  "bbox_right": 7,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -17,7 +17,7 @@
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 64,
+  "height": 8,
   "HTile": false,
   "layers": [
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"28748a85-eff7-495a-b102-9b0b613cb0c9","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 64,
+  "width": 8,
 }
