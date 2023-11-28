@@ -4,7 +4,9 @@ globalvar item_inventory;
 globalvar item_inventory_selected;
 globalvar item_inventory_active;
 globalvar item_inventory_items;
+globalvar item_inventory_pickup_range;
 
+item_inventory_pickup_range = 50;
 item_inventory_length = 8;
 item_inventory_selected = 0;
 item_inventory_items = [item_inventory_length];
