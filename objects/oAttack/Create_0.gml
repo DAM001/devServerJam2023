@@ -2,8 +2,9 @@ distance_from_player = 34;
 
 // variables set from code
 attack_direction = 0;
-attack_resource_damage = 0;
 attack_enemy_damage = 0;
+attack_tree_damage = 0;
+attack_mining_damage = 0;
 
 alarm[0] = 0.05 * room_speed;
 alarm[1] = 0.5 * room_speed;

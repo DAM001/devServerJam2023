@@ -7,6 +7,11 @@ var _left = keyboard_check(ord("A"));
 var _up = keyboard_check(ord("W"));
 var _down = keyboard_check(ord("S"));
 
+my_speed_modifier = 1;
+if (keyboard_check(vk_shift)) {
+	my_speed_modifier = 2;
+}
+
 //calculate the move direction
 var _xinput = _right - _left;
 var _yinput = _down - _up;
@@ -17,7 +22,7 @@ if (_magnitude > 0) {
     _yinput /= _magnitude;
 }
 
-move_and_collide(_xinput * my_speed, _yinput * my_speed, collide_objects);
+move_and_collide(_xinput * my_speed * my_speed_modifier, _yinput * my_speed * my_speed_modifier, collide_objects);
 
 
 // movement anim

@@ -7,11 +7,14 @@ item_description = "";
 
 // usable items
 usable = false;
-attack_resource_damage = 1;
+durability = 40;
+attack_mining_damage = 1;
+attack_tree_damage = 1;
 attack_enemy_damage = 1;
-attack_cooloff = 1;
+attack_cooloff = 10; // 1 is 100ms
 
-attack_available = true;
+attack_cooloff_current = 0;
+attack_cooloff_bar = instance_create_layer(x, y, 0, oHealthBar);
 
 // setup item properties
 alarm[0] = 0.1 * room_speed;

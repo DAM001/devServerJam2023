@@ -4,6 +4,7 @@ tree_health = tree_max_health;
 tree_damage = function(damage_amount = 0) {	
     tree_health -= damage_amount;
 	health_bar.set_health(tree_health, tree_max_health);
+	health_bar.set_color(make_color_rgb(255, 0, 0));
 	
 	if (tree_health <= 0) {
 		tree_destroy();
@@ -13,7 +14,7 @@ tree_damage = function(damage_amount = 0) {
 }
 
 tree_destroy = function() {
-	//create wood when destroyed
+	//create wood resource when destroyed
 	instance_create_layer(x, y, 0, oWood);
 	
 	var number_of_sticks = irandom(1);

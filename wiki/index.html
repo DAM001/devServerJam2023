@@ -11,11 +11,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Wiki</title>
-    <link rel="icon" type="image/png" href="Assets/Used/Player0.png">
+    <link rel="icon" type="image/png" href="source/player.png">
 
     <!-- Include files -->
     <link rel="stylesheet" href="data/style.css">
-    <!--<script src="data/app.js"></script>-->
+    <script src="data/app.js"></script>
 
 </head>
 
@@ -26,8 +26,10 @@
             DevServerJam2023, game and page by DAM
         </div>
     </div>
+
     <div class="content">
-        <div class="block">
+
+        <div class="block" id="about">
             <div class="block-header">
                 About Chronicles of Eldoria: Nature's Trial
             </div>
@@ -37,91 +39,28 @@
             </div>
         </div>
 
-        <!-- items -->
-        <div class="block">
+        <!-- TOOLS -->
+        <div class="block" id="tools">
             <div class="block-header">
                 Tools
             </div>
             <div class="block-text">
-                List of all the available tools
+                Equip yourself with essential tools, from a basic wooden sword to a powerful iron pickaxe, each serving a unique purpose. Explore their properties and deploy strategically against enemies, trees, and resources for survival in the untamed wilderness.
             </div>
-
-            <!-- Wood ax -->
-            <div class="block-header-2">Wood Ax</div>
-            <div class="item-folder">
-                <div class="item-element">
-                    <img src="source/sItem.png" alt="item" class="item-image">
-                </div>
-                <div class="item-element">
-                    <div class="item-header">Description:</div>
-                    <br>An item made for gather wood resource efficiently
-                </div>
-                <div class="item-element">
-                    <div class="item-header">Stats:</div>
-                    <br>Resource damage: 2
-                    <br>Enemy damage: 1
-                </div>
-                <div class="item-element">
-                    <div class="item-header">How to get:</div>
-                    <br>Place: Crafting Table
-                    <br>Resources: 1x Stick and 2x Wood
-                </div>
-            </div>
-
-            <!-- Wood sword -->
-            <div class="block-header-2">Wood Sword</div>
-            <div class="item-folder">
-                <div class="item-element">
-                    <img src="source/sItem.png" alt="item" class="item-image">
-                </div>
-                <div class="item-element">
-                    <div class="item-header">Description:</div>
-                    <br>An item made for killing living creatures
-                </div>
-                <div class="item-element">
-                    <div class="item-header">Stats:</div>
-                    <br>Resource damage: 1
-                    <br>Enemy damage: 2
-                </div>
-                <div class="item-element">
-                    <div class="item-header">How to get:</div>
-                    <br>Place: Crafting Table
-                    <br>Resources: 1x Stick and 2x Wood
-                </div>
-            </div>
-
         </div>
 
-        <div class="block">
+        <!-- RESOURCES -->
+        <div class="block" id="resources">
             <div class="block-header">
                 Resources
             </div>
             <div class="block-text">
                 The source of the raw crafting materials
             </div>
-
-            <!-- Tree -->
-            <div class="block-header-2">Tree</div>
-            <div class="item-folder">
-                <div class="item-element">
-                    <img src="source/sItem.png" alt="item" class="item-image">
-                </div>
-                <div class="item-element">
-                    <div class="item-header">Description:</div>
-                    <br>Randomly spawning in the world, it is a common resource. Use any ax for the best efficiency!
-                </div>
-                <div class="item-element">
-                    <div class="item-header">Stats:</div>
-                    <br>Health: 10
-                </div>
-                <div class="item-element">
-                    <div class="item-header">Drop:</div>
-                    <br>1x Wood and 0-1x Stick
-                </div>
-            </div>
         </div>
 
-        <div class="block">
+
+        <div class="block" id="food-resources">
             <div class="block-header">
                 Food sources
             </div>
@@ -130,7 +69,8 @@
             </div>
         </div>
 
-        <div class="block">
+
+        <div class="block" id="items">
             <div class="block-header">
                 Items
             </div>
@@ -139,14 +79,17 @@
             </div>
         </div>
 
-        <div class="block">
+
+        <div class="block" id="crafting">
             <div class="block-header">
                 Crafting
             </div>
             <div class="block-text">
                 Placeholder text
+                <a href="#tools">Tools</a>
             </div>
         </div>
+
     </div>
 </body>
 

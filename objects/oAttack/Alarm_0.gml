@@ -20,12 +20,28 @@ switch (attack_direction) {
 		break;
 }
 
-// Do damage to trees
-var _list = ds_list_create();
-var _num = instance_place_list(x, y, oTree, _list, false);
+// ---------- DAMAGE ----------
+damageObject = function(damage_object_type = oTree, damage_amount = 0) {
+	var _list = ds_list_create();
+	var _num = instance_place_list(x, y, damage_object_type, _list, false);
 
-if (_num > 0) {
-	_list[| 0].tree_damage(attack_resource_damage);
+	if (_num > 0) {
+		_list[| 0].tree_damage(damage_amount);
+		ds_list_destroy(_list);
+		
+		return true;
+	}
+
+	return false;
 }
 
-ds_list_destroy(_list);
+// Do damage to trees
+var is_object_damaged = damageObject(oTree, attack_tree_damage);
+
+/*if (is_object_damaged == false) {
+	is_object_damaged =  damageObject(oRockOre, attack_mining_damage);
+}
+
+if (is_object_damaged == false) {
+	is_object_damaged =  damageObject(oEnemy, attack_enemy_damage);
+}*/
