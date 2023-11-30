@@ -84,7 +84,6 @@ body {
 .item-folder {
     display: grid;
     grid-template-columns: 120px 2fr 1.3fr 1.5fr;
-    margin: -5px -0 0 -0;
 }
 
 .item-image {

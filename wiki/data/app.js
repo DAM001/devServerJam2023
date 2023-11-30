@@ -1,23 +1,130 @@
 window.onload = function() {
     const items = [{
-            containerId: "tools",
+            containerId: "resources",
             index: 0,
-            name: "Wood Ax",
+            name: "Nothing",
             imagePath: "source/sItem.png",
+            description: "A placeholder item for development only, this should not appear in the game",
+            stats: ["Nothing"],
+            howToGet: ["You cant get this item"]
+        },
+        {
+            containerId: "resources",
+            index: 1,
+            name: "Stick",
+            imagePath: "source/sStick.png",
+            description: "A crafting resource, used for most of the tools",
+            stats: ["Material for: Pickaxe", " Ax", " Sword", " Torch"],
+            howToGet: ["Spawns randomly on the ground", " Trees drop when chopped 50%"]
+        },
+        {
+            containerId: "tools",
+            index: 22,
+            name: "Wood Pickaxe",
+            imagePath: "source/sWoodPickaxe.png",
+            description: "A tool for mining stones and ores",
+            stats: [" Durability: 40", " Enemy damage: 1", " Mining damage: 2", " Tree damage: 1"],
+            howToGet: ["Place: Crafting Table", " Resources: 1x Stick and 2x Wood"]
+        },
+        {
+            containerId: "tools",
+            index: 23,
+            name: "Stone Pickaxe",
+            imagePath: "source/sStonePickaxe.png",
+            description: "A tool for mining stones and ores",
+            stats: [" Durability: 40", " Enemy damage: 1", " Mining damage: 3", " Tree damage: 1"],
+            howToGet: ["Place: Crafting Table", " Resources: 1x Stick and 2x Stone"]
+        },
+        {
+            containerId: "tools",
+            index: 24,
+            name: "Copper Pickaxe",
+            imagePath: "source/sCopperPickaxe.png",
+            description: "A tool for mining stones and ores",
+            stats: [" Durability: 40", " Enemy damage: 1", " Mining damage: 4", " Tree damage: 1"],
+            howToGet: ["Place: Crafting Table", " Resources: 1x Stick and 2x Copper Bar"]
+        },
+        {
+            containerId: "tools",
+            index: 25,
+            name: "Iron Pickaxe",
+            imagePath: "source/sIronPickaxe.png",
+            description: "A tool for mining stones and ores",
+            stats: [" Durability: 40", " Enemy damage: 1", " Mining damage: 5", " Tree damage: 1"],
+            howToGet: ["Place: Crafting Table", " Resources: 1x Stick and 2x Iron Bar"]
+        },
+        {
+            containerId: "tools",
+            index: 26,
+            name: "Wood Ax",
+            imagePath: "source/sWoodAx.png",
             description: "An item made for gathering wood resources efficiently",
             stats: [" Durability: 40", " Enemy damage: 1", " Mining damage: 1", " Tree damage: 2"],
             howToGet: ["Place: Crafting Table", " Resources: 1x Stick and 2x Wood"]
         },
         {
             containerId: "tools",
-            index: 1,
+            index: 27,
+            name: "Stone Ax",
+            imagePath: "source/sStoneAx.png",
+            description: "An item made for gathering wood resources efficiently",
+            stats: [" Durability: 40", " Enemy damage: 1", " Mining damage: 1", " Tree damage: 3"],
+            howToGet: ["Place: Crafting Table", " Resources: 1x Stick and 2x Stone"]
+        },
+        {
+            containerId: "tools",
+            index: 28,
+            name: "Copper Ax",
+            imagePath: "source/sCopperAx.png",
+            description: "An item made for gathering wood resources efficiently",
+            stats: [" Durability: 40", " Enemy damage: 1", " Mining damage: 1", " Tree damage: 4"],
+            howToGet: ["Place: Crafting Table", " Resources: 1x Stick and 2x Copper"]
+        },
+        {
+            containerId: "tools",
+            index: 29,
+            name: "Iron Ax",
+            imagePath: "source/sIronAx.png",
+            description: "An item made for gathering wood resources efficiently",
+            stats: [" Durability: 40", " Enemy damage: 1", " Mining damage: 1", " Tree damage: 5"],
+            howToGet: ["Place: Crafting Table", " Resources: 1x Stick and 2x Iron"]
+        },
+        {
+            containerId: "tools",
+            index: 30,
             name: "Wood Sword",
-            imagePath: "source/sItem.png",
-            description: "A tool for mining stones and ores",
+            imagePath: "source/sWoodSword.png",
+            description: "A tool for fighting against living creatures",
             stats: [" Durability: 40", " Enemy damage: 2", " Mining damage: 1", " Tree damage: 1"],
-            howToGet: ["Place: Crafting Table", " Resources: 3x Stone and 2x Stick"]
-        }
-        // Add more items as needed
+            howToGet: ["Place: Crafting Table", " Resources: 1x Stick and 2x Wood"]
+        },
+        {
+            containerId: "tools",
+            index: 31,
+            name: "Stone Sword",
+            imagePath: "source/sStoneSword.png",
+            description: "A tool for fighting against living creatures",
+            stats: [" Durability: 40", " Enemy damage: 3", " Mining damage: 1", " Tree damage: 1"],
+            howToGet: ["Place: Crafting Table", " Resources: 1x Stick and 2x Stone"]
+        },
+        {
+            containerId: "tools",
+            index: 32,
+            name: "Copper Sword",
+            imagePath: "source/sCopperSword.png",
+            description: "A tool for fighting against living creatures",
+            stats: [" Durability: 40", " Enemy damage: 4", " Mining damage: 1", " Tree damage: 1"],
+            howToGet: ["Place: Crafting Table", " Resources: 1x Stick and 2x Copper"]
+        },
+        {
+            containerId: "tools",
+            index: 33,
+            name: "Iron Sword",
+            imagePath: "source/sIronSword.png",
+            description: "A tool for fighting against living creatures",
+            stats: [" Durability: 40", " Enemy damage: 5", " Mining damage: 1", " Tree damage: 1"],
+            howToGet: ["Place: Crafting Table", " Resources: 1x Stick and 2x Iron"]
+        },
     ];
 
     items.forEach(item => createItemBlock(item));
@@ -45,7 +152,7 @@ function createItemBlock(item) {
     itemFolder.appendChild(descriptionElement);
 
     // Create and append stats element
-    const statsElement = createItemElement("div", "item-element", "Stats:", item.stats);
+    const statsElement = createItemElement("div", "item-element", "About:", item.stats);
     itemFolder.appendChild(statsElement);
 
     // Create and append how to get element
