@@ -18,6 +18,51 @@ window.onload = function() {
             howToGet: ["Spawns randomly on the ground", " Trees drop when chopped 50%"]
         },
         {
+            containerId: "resources",
+            index: 2,
+            name: "Rock",
+            imagePath: "source/sRock.png",
+            description: "A crafting resource, mainly used for the stone tools",
+            stats: ["Material for: Pickaxe", " Ax", " Sword", " Furnace"],
+            howToGet: ["Spawns randomly on the ground", " Stone with ores drops when mined"]
+        },
+        {
+            containerId: "resources",
+            index: 3,
+            name: "Wood",
+            imagePath: "source/sWood.png",
+            description: "A crafting resource, gained from trees",
+            stats: ["Material for: Pickaxe", " Ax", " Sword", " Crafting Table"],
+            howToGet: ["Dropped by trees when chopped"]
+        },
+        {
+            containerId: "food-source",
+            index: 4,
+            name: "Grass",
+            imagePath: "source/sGrass.png",
+            description: "An easily accessable food source",
+            stats: ["Restores 1 unit of hunger"],
+            howToGet: ["Randomly spawns on the ground"]
+        },
+        {
+            containerId: "food-source",
+            index: 5,
+            name: "Raw Meat",
+            imagePath: "source/sRawMeat.png",
+            description: "Food dropped by living creatures. Can be improved",
+            stats: ["Restores 2 unit of hunger"],
+            howToGet: ["Dropped by living creatures after killing them"]
+        },
+        {
+            containerId: "food-source",
+            index: 6,
+            name: "Meat",
+            imagePath: "source/sMeat.png",
+            description: "Cooked Raw Meat",
+            stats: ["Restores 5 unit of hunger"],
+            howToGet: ["Furnace: 1x Raw Meat, 1x Coal"]
+        },
+        {
             containerId: "tools",
             index: 22,
             name: "Wood Pickaxe",
