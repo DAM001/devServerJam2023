@@ -63,7 +63,7 @@ if (keyboard_check_pressed(ord("E")) or mouse_check_button_pressed(mb_left)) {
     var nearestDistance = -1;
     
     with (oItem) {
-        var distance = point_distance(x - 32, y - 32, other.x, other.y);
+        var distance = point_distance(x, y, other.x, other.y);
         
         if (nearestItem == noone || distance < nearestDistance) {
 			nearestItem = id;
@@ -127,3 +127,6 @@ if mouse_wheel_down()
 	
 	change_active_inventory(item_inventory_selected);
 }
+
+// ---------- VISUALS ----------
+depth = -y - 16;

@@ -21,7 +21,7 @@ for (var i = 0; i < item_inventory_length; i += 1)
         if (spriteIndex >= 0 && spriteIndex < array_length(item_sprites))
         {
             var sprite = item_sprites[spriteIndex];
-			draw_sprite_ext(sprite, 0, xx + 8, y + 8, 2, 2, 0, c_white, 1);
+			draw_sprite_ext(sprite, 0, xx + 16, y + 16, 2, 2, 0, c_white, 1);
 		}
     }
 }
