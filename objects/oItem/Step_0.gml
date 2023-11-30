@@ -42,10 +42,13 @@ depth = item_depth;
 
 // USE
 if (keyboard_check_pressed(vk_space) or mouse_check_button_pressed(mb_left)) {
-	if (equipped && usable) {
+	if (equipped && usable && attack_available) {
 		var atteck_effect = instance_create_layer(oPlayer.x, oPlayer.y, 0, oAttack);
 		atteck_effect.attack_direction = oPlayer.my_facing;
 		atteck_effect.attack_enemy_damage = attack_enemy_damage;
 		atteck_effect.attack_resource_damage = attack_resource_damage;
+		
+		alarm[1] = attack_cooloff * room_speed;
+		attack_available = false;
 	}
 }

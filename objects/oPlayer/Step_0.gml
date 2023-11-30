@@ -54,7 +54,7 @@ if (keyboard_check_pressed(ord("F")) or mouse_check_button_pressed(mb_right)) {
 	if (item_inventory[item_inventory_selected] >= 0) {
 		item_inventory[item_inventory_selected] = -1;
 
-		item_inventory_active.equipped = false;
+		item_inventory_active.item_unequip();
 	}
 }
 
@@ -76,7 +76,7 @@ if (keyboard_check_pressed(ord("E")) or mouse_check_button_pressed(mb_left)) {
 		item_inventory[item_inventory_selected] = nearestItem.item_index;
 		item_inventory_items[item_inventory_selected] = nearestItem;
 		
-		nearestItem.equipped = true;
+		nearestItem.item_equip();
 		change_active_inventory(item_inventory_selected);
 	}
 }
