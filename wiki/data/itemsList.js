@@ -33,7 +33,7 @@ window.onload = function() {
             index: 2,
             imagePath: "sRock",
             description: "A crafting resource, mainly used for the stone tools",
-            resource: ["sStonePickaxe", "sStoneAx", "sStoneSword", "sFurnace"],
+            resource: ["sStonePickaxe", "sStoneAx", "sStoneSword", "sFurnace", "sArrow"],
             howToGet: "Spawns randomly on the ground; Stone with ores drops when mined"
         },
         {
@@ -281,7 +281,11 @@ window.onload = function() {
             imagePath: "sWoodAx",
             description: "An item made for gathering wood resources efficiently",
             stats: [" Durability: 40", " Enemy damage: 1", " Mining damage: 1", " Tree damage: 2"],
-            howToGet: ["Place: Crafting Table", " Resources: 1x Stick and 2x Wood"]
+            crafting: [
+                ["sCraftingTable", "1"],
+                ["sWood", "2"],
+                ["sStick", "1"]
+            ]
         },
         {
             containerId: "tools",
@@ -289,7 +293,11 @@ window.onload = function() {
             imagePath: "sStoneAx",
             description: "An item made for gathering wood resources efficiently",
             stats: [" Durability: 40", " Enemy damage: 1", " Mining damage: 1", " Tree damage: 3"],
-            howToGet: ["Place: Crafting Table", " Resources: 1x Stick and 2x Stone"]
+            crafting: [
+                ["sCraftingTable", "1"],
+                ["sRock", "2"],
+                ["sStick", "1"]
+            ]
         },
         {
             containerId: "tools",
@@ -297,7 +305,11 @@ window.onload = function() {
             imagePath: "sCopperAx",
             description: "An item made for gathering wood resources efficiently",
             stats: [" Durability: 40", " Enemy damage: 1", " Mining damage: 1", " Tree damage: 4"],
-            howToGet: ["Place: Crafting Table", " Resources: 1x Stick and 2x Copper"]
+            crafting: [
+                ["sCraftingTable", "1"],
+                ["sCopperBar", "2"],
+                ["sStick", "1"]
+            ]
         },
         {
             containerId: "tools",
@@ -305,7 +317,11 @@ window.onload = function() {
             imagePath: "sIronAx",
             description: "An item made for gathering wood resources efficiently",
             stats: [" Durability: 40", " Enemy damage: 1", " Mining damage: 1", " Tree damage: 5"],
-            howToGet: ["Place: Crafting Table", " Resources: 1x Stick and 2x Iron"]
+            crafting: [
+                ["sCraftingTable", "1"],
+                ["sIronBar", "2"],
+                ["sStick", "1"]
+            ]
         },
         {
             containerId: "tools",
@@ -313,7 +329,11 @@ window.onload = function() {
             imagePath: "sWoodSword",
             description: "A tool for fighting against living creatures",
             stats: [" Durability: 40", " Enemy damage: 2", " Mining damage: 1", " Tree damage: 1"],
-            howToGet: ["Place: Crafting Table", " Resources: 1x Stick and 2x Wood"]
+            crafting: [
+                ["sCraftingTable", "1"],
+                ["sWood", "2"],
+                ["sStick", "1"]
+            ]
         },
         {
             containerId: "tools",
@@ -321,7 +341,11 @@ window.onload = function() {
             imagePath: "sStoneSword",
             description: "A tool for fighting against living creatures",
             stats: [" Durability: 40", " Enemy damage: 3", " Mining damage: 1", " Tree damage: 1"],
-            howToGet: ["Place: Crafting Table", " Resources: 1x Stick and 2x Stone"]
+            crafting: [
+                ["sCraftingTable", "1"],
+                ["sRock", "2"],
+                ["sStick", "1"]
+            ]
         },
         {
             containerId: "tools",
@@ -329,7 +353,11 @@ window.onload = function() {
             imagePath: "sCopperSword",
             description: "A tool for fighting against living creatures",
             stats: [" Durability: 40", " Enemy damage: 4", " Mining damage: 1", " Tree damage: 1"],
-            howToGet: ["Place: Crafting Table", " Resources: 1x Stick and 2x Copper"]
+            crafting: [
+                ["sCraftingTable", "1"],
+                ["sCopperBar", "2"],
+                ["sStick", "1"]
+            ]
         },
         {
             containerId: "tools",
@@ -337,7 +365,11 @@ window.onload = function() {
             imagePath: "sIronSword",
             description: "A tool for fighting against living creatures",
             stats: [" Durability: 40", " Enemy damage: 5", " Mining damage: 1", " Tree damage: 1"],
-            howToGet: ["Place: Crafting Table", " Resources: 1x Stick and 2x Iron"]
+            crafting: [
+                ["sCraftingTable", "1"],
+                ["sIronBar", "2"],
+                ["sStick", "1"]
+            ]
         }
     ];
 

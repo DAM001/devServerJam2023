@@ -18,6 +18,7 @@
     <script src="data/app.js"></script>
     <script src="data/item.js"></script>
     <script src="data/itemsList.js"></script>
+    <script src="data/craftingRecepie.js"></script>
 
 </head>
 
@@ -93,7 +94,7 @@
             </div>
         </div>
 
-        <!-- RESOURCES -->
+        <!-- PLAYER -->
         <div class="block" id="player">
             <div class="block-header">
                 Player
@@ -116,199 +117,20 @@
             </div>
         </div>
 
-        <div class="block" id="crafting">
+        <!-- RESOURCES -->
+        <div class="block" id="resources">
             <div class="block-header">
-                Crafting
+                Resources
             </div>
             <div class="block-text">
-                Each crafting station provides access to different recepies to craft. You need to hold the required items in your inventory for crafting.
+                The source of the raw crafting materials
             </div>
-            <div class="block-header-2" id="Player">0 | Player Hand</div>
-            <img src="source/sPlayerCut.png" alt="player" class="item-image">
-            <div class="block-header-3">Craftable:</div>
-            <ul class="block-list">
-                <li>
-                    <item-link imageSource="sCraftingTable"></item-link>
-                    <div class="block-list-items">
-                        <item-link imageSource="sWood" quantity="4"></item-link>
-                    </div>
-                </li>
-                <li>
-                    <item-link imageSource="sTorch"></item-link>
-                    <div class="block-list-items">
-                        <item-link imageSource="sStick" quantity="1"></item-link>,
-                        <item-link imageSource="sCoal" quantity="1"></item-link>
-                    </div>
-                </li>
-            </ul>
-            <div id="Crafting Table"></div>
-            <div class="block-header-3">Craftable:</div>
-            <ul class="block-list">
-                <li>
-                    <item-link imageSource="sFurnace"></item-link>
-                    <div>
-                        <item-link imageSource="sRock" quantity="4"></item-link>
-                    </div>
-                </li>
-                <li>
-                    <item-link imageSource="sCopperAnvil"></item-link>
-                    <div>
-                        <item-link imageSource="sCopperBar" quantity="4"></item-link>
-                    </div>
-                </li>
-                <li>
-                    <item-link imageSource="sIronAnvil"></item-link>
-                    <div>
-                        <item-link imageSource="sIronBar" quantity="4"></item-link>
-                    </div>
-                </li>
-                <li>
-                    <item-link imageSource="sArrow"></item-link>
-                    <div>
-                        <item-link imageSource="sRock" quantity="1"></item-link>,
-                        <item-link imageSource="sString" quantity="1"></item-link>
-                    </div>
-                </li>
-                <li>
-                    <item-link imageSource="sBow"></item-link>
-                    <div>
-                        <item-link imageSource="sWood" quantity="1"></item-link>,
-                        <item-link imageSource="sStick" quantity="2"></item-link>,
-                        <item-link imageSource="sString" quantity="1"></item-link>
-                    </div>
-                </li>
-                <li>
-                    <item-link imageSource="sCrossbow"></item-link>
-                    <div>
-                        <item-link imageSource="sCopperBar" quantity="1"></item-link>,
-                        <item-link imageSource="sStick" quantity="2"></item-link>,
-                        <item-link imageSource="sString" quantity="1"></item-link>
-                    </div>
-                </li>
-                <li>
-                    <item-link imageSource="sWoodPickaxe"></item-link>
-                    <div>
-                        <item-link imageSource="sWood" quantity="2"></item-link>,
-                        <item-link imageSource="sStick" quantity="1"></item-link>
-                    </div>
-                </li>
-                <li>
-                    <item-link imageSource="sStonePickaxe"></item-link>
-                    <div>
-                        <item-link imageSource="sRock" quantity="2"></item-link>,
-                        <item-link imageSource="sStick" quantity="1"></item-link>
-                    </div>
-                </li>
-                <li>
-                    <item-link imageSource="sWoodAx"></item-link>
-                    <div>
-                        <item-link imageSource="sWood" quantity="2"></item-link>,
-                        <item-link imageSource="sStick" quantity="1"></item-link>
-                    </div>
-                </li>
-                <li>
-                    <item-link imageSource="sStoneAx"></item-link>
-                    <div>
-                        <item-link imageSource="sRock" quantity="2"></item-link>,
-                        <item-link imageSource="sStick" quantity="1"></item-link>
-                    </div>
-                </li>
-                <li>
-                    <item-link imageSource="sWoodSword"></item-link>
-                    <div>
-                        <item-link imageSource="sWood" quantity="2"></item-link>,
-                        <item-link imageSource="sStick" quantity="1"></item-link>
-                    </div>
-                </li>
-                <li>
-                    <item-link imageSource="sStoneSword" /></item-link>
-                    <div>
-                        <item-link imageSource="sRock" quantity="2"></item-link>,
-                        <item-link imageSource="sStick" quantity="1"></item-link>
-                    </div>
-                </li>
-            </ul>
-            <div id="Furnace"></div>
-            <div class="block-header-3">Craftable:</div>
-            <ul class="block-list">
-                <li>
-                    <item-link imageSource="sMeat"></item-link>
-                    <div class="block-list-items">
-                        <item-link imageSource="sRawMeat" quantity="1"></item-link>,
-                        <item-link imageSource="sCoal" quantity="1"></item-link>
-                    </div>
-                </li>
-                <li>
-                    <item-link imageSource="sCopperBar"></item-link>
-                    <div class="block-list-items">
-                        <item-link imageSource="sCopperOre" quantity="1"></item-link>,
-                        <item-link imageSource="sCoal" quantity="1"></item-link>
-                    </div>
-                </li>
-                <li>
-                    <item-link imageSource="sIronBar"></item-link>
-                    <div class="block-list-items">
-                        <item-link imageSource="sIronOre" quantity="1"></item-link>,
-                        <item-link imageSource="sCoal" quantity="1"></item-link>
-                    </div>
-                </li>
-            </ul>
-            <div id="Copper Anvil"></div>
-            <div class="block-header-3">Craftable:</div>
-            <ul class="block-list">
-                <li>
-                    <item-link imageSource="sCopperPickaxe"></item-link>
-                    <div class="block-list-items">
-                        <item-link imageSource="sCopperBar" quantity="2"></item-link>,
-                        <item-link imageSource="sStick" quantity="1"></item-link>
-                    </div>
-                </li>
-                <li>
-                    <item-link imageSource="sCopperAx"></item-link>
-                    <div class="block-list-items">
-                        <item-link imageSource="sCopperBar" quantity="2"></item-link>,
-                        <item-link imageSource="sStick" quantity="1"></item-link>
-                    </div>
-                </li>
-                <li>
-                    <item-link imageSource="sCopperSword"></item-link>
-                    <div class="block-list-items">
-                        <item-link imageSource="sCopperBar" quantity="2"></item-link>,
-                        <item-link imageSource="sStick" quantity="1"></item-link>
-                    </div>
-                </li>
-            </ul>
-            <div id="Iron Anvil"></div>
-            <div class="block-header-3">Craftable:</div>
-            <ul class="block-list">
-                <li>
-                    <item-link imageSource="sIronPickaxe"></item-link>
-                    <div class="block-list-items">
-                        <item-link imageSource="sIronBar" quantity="2"></item-link>,
-                        <item-link imageSource="sStick" quantity="1"></item-link>
-                    </div>
-                </li>
-                <li>
-                    <item-link imageSource="sIronAx"></item-link>
-                    <div class="block-list-items">
-                        <item-link imageSource="sIronBar" quantity="2"></item-link>,
-                        <item-link imageSource="sStick" quantity="1"></item-link>
-                    </div>
-                </li>
-                <li>
-                    <item-link imageSource="sIronSword"></item-link>
-                    <div class="block-list-items">
-                        <item-link imageSource="sIronBar" quantity="2"></item-link>,
-                        <item-link imageSource="sStick" quantity="1"></item-link>
-                    </div>
-                </li>
-            </ul>
         </div>
 
-        <!-- MOBS -->
-        <div class="block" id="mobs">
+        <!-- FOOD SOURCES -->
+        <div class="block" id="food-source">
             <div class="block-header">
-                Mobs
+                Food sources
             </div>
             <div class="block-text">
                 Placeholder text
@@ -325,20 +147,109 @@
             </div>
         </div>
 
-        <!-- RESOURCES -->
-        <div class="block" id="resources">
+        <div class="block" id="crafting">
             <div class="block-header">
-                Resources
+                Crafting
             </div>
             <div class="block-text">
-                The source of the raw crafting materials
+                Each crafting station provides access to different recepies to craft. You need to hold the required items in your inventory for crafting.
             </div>
+            <div class="block-header-2" id="Player">0 | Player Hand</div>
+            <img src="source/sPlayerCut.png" alt="player" class="item-image">
+            <div class="block-header-3">Crafting recepies:</div>
+            <ul class="block-list">
+                <li>
+                    <crafting-recipe result="sCraftingTable" item0="sWood" item0-quantity="4"></crafting-recipe>
+                </li>
+                <li>
+                    <crafting-recipe result="sTorch" item0="sStick" item0-quantity="1" item1="sCoal" item1-quantity="1"></crafting-recipe>
+                </li>
+            </ul>
+            <div id="Crafting Table"></div>
+            <div class="block-header-3">Crafting recepies:</div>
+            <ul class="block-list">
+                <li>
+                    <crafting-recipe result="sFurnace" item0="sRock" item0-quantity="4"></crafting-recipe>
+                </li>
+                <li>
+                    <crafting-recipe result="sCopperAnvil" item0="sCopperBar" item0-quantity="4"></crafting-recipe>
+                </li>
+                <li>
+                    <crafting-recipe result="sIronAnvil" item0="sIronBar" item0-quantity="4"></crafting-recipe>
+                </li>
+                <li>
+                    <crafting-recipe result="sArrow" item0="sRock" item0-quantity="1" item1="sStick" item1-quantity="1"></crafting-recipe>
+                </li>
+                <li>
+                    <crafting-recipe result="sBow" item0="sWood" item0-quantity="1" item1="sStick" item1-quantity="2" item2="sString" item2-quantity="1"></crafting-recipe>
+                </li>
+                <li>
+                    <crafting-recipe result="sCrossbow" item0="sCopperBar" item0-quantity="1" item1="sStick" item1-quantity="2" item2="sString" item2-quantity="1"></crafting-recipe>
+                </li>
+                <li>
+                    <crafting-recipe result="sWoodPickaxe" item0="sWood" item0-quantity="2" item1="sStick" item1-quantity="2"></crafting-recipe>
+                </li>
+                <li>
+                    <crafting-recipe result="sStonePickaxe" item0="sRock" item0-quantity="2" item1="sStick" item1-quantity="2"></crafting-recipe>
+                </li>
+                <li>
+                    <crafting-recipe result="sWoodAx" item0="sWood" item0-quantity="2" item1="sStick" item1-quantity="2"></crafting-recipe>
+                </li>
+                <li>
+                    <crafting-recipe result="sStoneAx" item0="sRock" item0-quantity="2" item1="sStick" item1-quantity="2"></crafting-recipe>
+                </li>
+                <li>
+                    <crafting-recipe result="sWoodSword" item0="sWood" item0-quantity="2" item1="sStick" item1-quantity="2"></crafting-recipe>
+                </li>
+                <li>
+                    <crafting-recipe result="sStoneSword" item0="sRock" item0-quantity="2" item1="sStick" item1-quantity="2"></crafting-recipe>
+                </li>
+            </ul>
+            <div id="Furnace"></div>
+            <div class="block-header-3">Crafting recepies:</div>
+            <ul class="block-list">
+                <li>
+                    <crafting-recipe result="sMeat" item0="sRawMeat" item0-quantity="1" item1="sCoal" item1-quantity="1"></crafting-recipe>
+                </li>
+                <li>
+                    <crafting-recipe result="sCopperBar" item0="sCopperOre" item0-quantity="1" item1="sCoal" item1-quantity="1"></crafting-recipe>
+                </li>
+                <li>
+                    <crafting-recipe result="sIronBar" item0="sIronOre" item0-quantity="1" item1="sCoal" item1-quantity="1"></crafting-recipe>
+                </li>
+            </ul>
+            <div id="Copper Anvil"></div>
+            <div class="block-header-3">Crafting recepies:</div>
+            <ul class="block-list">
+                <li>
+                    <crafting-recipe result="sCopperPickaxe" item0="sCopperBar" item0-quantity="2" item1="sStick" item1-quantity="1"></crafting-recipe>
+                </li>
+                <li>
+                    <crafting-recipe result="sCopperAx" item0="sCopperBar" item0-quantity="2" item1="sStick" item1-quantity="1"></crafting-recipe>
+                </li>
+                <li>
+                    <crafting-recipe result="sCopperSword" item0="sCopperBar" item0-quantity="2" item1="sStick" item1-quantity="1"></crafting-recipe>
+                </li>
+            </ul>
+            <div id="Iron Anvil"></div>
+            <div class="block-header-3">Crafting recepies:</div>
+            <ul class="block-list">
+                <li>
+                    <crafting-recipe result="sIronPickaxe" item0="sIronBar" item0-quantity="2" item1="sStick" item1-quantity="1"></crafting-recipe>
+                </li>
+                <li>
+                    <crafting-recipe result="sIronAx" item0="sIronBar" item0-quantity="2" item1="sStick" item1-quantity="1"></crafting-recipe>
+                </li>
+                <li>
+                    <crafting-recipe result="sIronSword" item0="sIronBar" item0-quantity="2" item1="sStick" item1-quantity="1"></crafting-recipe>
+                </li>
+            </ul>
         </div>
 
-        <!-- FOOD SOURCES -->
-        <div class="block" id="food-source">
+        <!-- MOBS -->
+        <div class="block" id="mobs">
             <div class="block-header">
-                Food sources
+                Mobs
             </div>
             <div class="block-text">
                 Placeholder text
