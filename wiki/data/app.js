@@ -63,6 +63,33 @@ window.onload = function() {
             howToGet: ["Furnace: 1x Raw Meat, 1x Coal"]
         },
         {
+            containerId: "resources",
+            index: 7,
+            name: "String",
+            imagePath: "source/sString.png",
+            description: "Description",
+            stats: ["Material for: Bow", " Crossbow"],
+            howToGet: ["Kill enemy mobs"]
+        },
+        {
+            containerId: "resources",
+            index: 8,
+            name: "Coal",
+            imagePath: "source/sCoal.png",
+            description: "Description",
+            stats: ["Material for: Torch", " Copper Ore", " Iron Ore", " Meat"],
+            howToGet: ["Mine Rock"]
+        },
+        {
+            containerId: "tools",
+            index: 13,
+            name: "Torch",
+            imagePath: "source/sTorch.png",
+            description: "Description",
+            stats: ["???"],
+            howToGet: ["Craft"]
+        },
+        {
             containerId: "tools",
             index: 22,
             name: "Wood Pickaxe",
@@ -179,6 +206,7 @@ function createItemBlock(item) {
     const header = document.createElement("div");
     header.className = "block-header-2";
     header.textContent = item.index + " | " + item.name;
+    header.id = item.name;
 
     const itemFolder = document.createElement("div");
     itemFolder.className = "item-folder";
@@ -188,9 +216,9 @@ function createItemBlock(item) {
 
     // Append image to the item folder
     const imageElement = document.createElement("div");
-    imageElement.className = "item-element";
+    imageElement.className = "block-image";
     imageElement.appendChild(itemImage);
-    itemFolder.appendChild(imageElement);
+    //itemFolder.appendChild(imageElement);
 
     // Create and append description element
     const descriptionElement = createItemElement("div", "item-element", "Description:", item.description);
@@ -208,6 +236,7 @@ function createItemBlock(item) {
     const container = document.getElementById(item.containerId);
     if (container) {
         container.appendChild(header);
+        container.appendChild(imageElement);
         container.appendChild(itemFolder);
     } else {
         console.error(`Container with ID '${item.containerId}' not found.`);
@@ -237,4 +266,38 @@ function createItemImage(imagePath) {
     itemImage.alt = "item";
     itemImage.className = "item-image";
     return itemImage;
+}
+
+let isContentVisible = true;
+
+function toggleContent() {
+    isContentVisible = !isContentVisible;
+
+    const contentTable = document.getElementById("table-of-content");
+    contentTable.style.display = isContentVisible ? "block" : "none";
+}
+
+// Create items with links and images
+function addItemLink(containerId, imageSource, itemName) {
+    // Get the container element by ID
+    const containerDiv = document.getElementById(containerId);
+
+    if (containerDiv) {
+        // Create the image element
+        const imageElement = document.createElement("img");
+        imageElement.src = imageSource;
+        imageElement.alt = itemName;
+        imageElement.className = "block-list-image";
+
+        // Create the anchor element
+        const anchorElement = document.createElement("a");
+        anchorElement.href = `#${itemName}`;
+        anchorElement.textContent = itemName;
+
+        // Append the image and anchor elements to the container
+        containerDiv.appendChild(imageElement);
+        containerDiv.appendChild(anchorElement);
+    } else {
+        console.error(`Container with ID '${containerId}' not found.`);
+    }
 }

@@ -10,8 +10,8 @@
     <meta http-equiv="pragma" content="no-cache">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Wiki</title>
-    <link rel="icon" type="image/png" href="source/player.png">
+    <title>Wiki: Chronicles of Eldoria: Nature's Trial</title>
+    <link rel="icon" type="image/png" href="source/sPlayerCut.png">
 
     <!-- Include files -->
     <link rel="stylesheet" href="data/style.css">
@@ -20,12 +20,64 @@
 </head>
 
 <body>
-    <div class="header">
+    <div class="header" id="header">
         Chronicles of Eldoria: Nature's Trial
         <div class="header-subtitle">
             DevServerJam2023, game and page by DAM
         </div>
     </div>
+
+    <a href="#header"><img src="source/icons/upArrow.png" alt="upArrow" class="scroll-up" style=""></a>
+
+    <!--<img src="source/icons/menu.png" alt="menu" class="table-of-content-toggle" onclick="toggleContent()">
+    <div class="table-of-content-folder" id="table-of-content">
+        <div class="table-of-content-header">Table of <br>Content</div>
+        <div class="table-of-content"><a class="a-1" href="#about">About</a>
+            <a class="a-1" href="#player">Player</a>
+            <a class="a-1" href="#mobs">Mobs</a>
+            <a class="a-1" href="#tools">Tools</a>
+            <a class="a-2" href="#Wood Pickaxe">Wood Pickaxe</a>
+            <a class="a-2" href="#Stone Pickaxe">Stone Pickaxe</a>
+            <a class="a-1" href="#resources">Resources</a>
+            <a class="a-1" href="#food-source">Food Source</a>
+            <a class="a-1" href="#items">Items</a>
+            <a class="a-1" href="#crafting">Crafting</a>
+
+            <a class="a-1" href="#about">About</a>
+            <a class="a-1" href="#player">Player</a>
+            <a class="a-1" href="#mobs">Mobs</a>
+            <a class="a-1" href="#tools">Tools</a>
+            <a class="a-2" href="#Wood Pickaxe">Wood Pickaxe</a>
+            <a class="a-2" href="#Stone Pickaxe">Stone Pickaxe</a>
+            <a class="a-1" href="#resources">Resources</a>
+            <a class="a-1" href="#food-source">Food Source</a>
+            <a class="a-1" href="#items">Items</a>
+            <a class="a-1" href="#crafting">Crafting</a>
+
+            <a class="a-1" href="#about">About</a>
+            <a class="a-1" href="#player">Player</a>
+            <a class="a-1" href="#mobs">Mobs</a>
+            <a class="a-1" href="#tools">Tools</a>
+            <a class="a-2" href="#Wood Pickaxe">Wood Pickaxe</a>
+            <a class="a-2" href="#Stone Pickaxe">Stone Pickaxe</a>
+            <a class="a-1" href="#resources">Resources</a>
+            <a class="a-1" href="#food-source">Food Source</a>
+            <a class="a-1" href="#items">Items</a>
+            <a class="a-1" href="#crafting">Crafting</a>
+
+            <a class="a-1" href="#about">About</a>
+            <a class="a-1" href="#player">Player</a>
+            <a class="a-1" href="#mobs">Mobs</a>
+            <a class="a-1" href="#tools">Tools</a>
+            <a class="a-2" href="#Wood Pickaxe">Wood Pickaxe</a>
+            <a class="a-2" href="#Stone Pickaxe">Stone Pickaxe</a>
+            <a class="a-1" href="#resources">Resources</a>
+            <a class="a-1" href="#food-source">Food Source</a>
+            <a class="a-1" href="#items">Items</a>
+            <a class="a-1" href="#crafting">Crafting</a>
+        </div>
+    </div>-->
+
 
     <div class="content">
 
@@ -33,9 +85,85 @@
             <div class="block-header">
                 About Chronicles of Eldoria: Nature's Trial
             </div>
-            <div class="block-text block-text-with-image">
-                <img src="source/player.png" alt="player" class="block-image" style="width: 70px"> Survive and thrive in an untamed wilderness. Collect resources, craft tools, and battle fierce creatures. Your goal: gather five mystical gemstones from
-                these adversaries to construct a portal and escape the wilds. Master survival, face challenges, and embark on an epic journey to find your way home.
+            <div class="block-text">
+                Survive and thrive in an untamed wilderness. Collect resources, craft tools, and battle fierce creatures. Your goal: gather five mystical gemstones from these adversaries to construct a portal and escape the wilds. Master survival, face challenges, and
+                embark on an epic journey to find your way home.
+            </div>
+        </div>
+
+        <!-- RESOURCES -->
+        <div class="block" id="player">
+            <div class="block-header">
+                Player
+            </div>
+            <div class="block-text">
+                The main character LOL
+            </div>
+            <div class="block-header-2">
+                Control
+            </div>
+            <div class="block-text">
+                <img src="source/sPlayerCut.png" alt="player" class="block-image" style="width: 80px; margin-right: 40px">
+                <ul class="block-list">
+                    <li>Movement: W, A, S, D</li>
+                    <li>Equip Item: E OR Left Mouse</li>
+                    <li>Use Item: Space OR Left Mouse</li>
+                    <li>Throw Item: F OR Right Mouse</li>
+                    <li>Change Active Inventory Slot: Alpha Keys OR Mouse Scroll Wheel</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="block" id="crafting">
+            <div class="block-header">
+                Crafting
+            </div>
+            <div class="block-text">
+                Each crafting station provides access to different recepies to craft. You need to hold the required items in your inventory for crafting.
+            </div>
+            <div class="block-header-2">Level 0 | Player hand</div>
+            <img src="source/sPlayerCut.png" alt="player" class="item-image">
+            <ul class="block-list">
+                <li id="itemHolder0">
+                    <script>
+                        addItemLink("itemHolder0", "source/sCraftingTable.png", "Crafting table");
+                    </script>
+                    : 4x Wood
+                </li>
+                <li id="itemHolder1">
+                    <script>
+                        addItemLink("itemHolder1", "source/sTorch.png", "Torch");
+                    </script>
+                    : 1x Stick, 1x Coal
+                </li>
+            </ul>
+            <div class="block-header-2">Level 1 | Crafting Table</div>
+            <img src="source/sCraftingTable.png" alt="player" class="item-image">
+            <ul class="block-list">
+                <li>Furnace [4x stone]</li>
+                <li>Copper Anvil [4x Copper Bar]</li>
+                <li>Iron Anvil [4x Iron Bar]</li>
+                <li>Arrow [1x Stone, 1x String]</li>
+                <li>Bow [1x Wood, 2x Stick, 1x String]</li>
+                <li>Crossbow [1x Copper, 2x Stick, 1x String]</li>
+                <li>Wood Pickaxe [2x Wood, 1x Stick]</li>
+                <li>Stone Pickaxe [2x Stone, 1x Stick]</li>
+                <li>Wood Ax [2x Wood, 1x Stick]</li>
+                <li>Stone Ax [2x Stone, 1x Stick]</li>
+                <li>Wood Sword [2x Wood, 1x Stick]</li>
+                <li>Stone Sword [2x Stone, 1x Stick]</li>
+            </ul>
+            <div class="block-header-2">Level 2 | Furnace</div>
+            <div class="block-header-2">Level 3 | Copper Anvil</div>
+            <div class="block-header-2">Level 4 | Iron Anvil</div>
+        </div>
+
+        <div class="block" id="mobs">
+            <div class="block-header">
+                Mobs
+            </div>
+            <div class="block-text">
+                Placeholder text
             </div>
         </div>
 
@@ -70,26 +198,14 @@
         </div>
 
 
-        <div class="block" id="items">
+        <div class="block" id="crafting-stations">
             <div class="block-header">
-                Items
+                Crafting Stations
             </div>
             <div class="block-text">
                 Placeholder text
             </div>
         </div>
-
-
-        <div class="block" id="crafting">
-            <div class="block-header">
-                Crafting
-            </div>
-            <div class="block-text">
-                Placeholder text
-                <a href="#tools">Tools</a>
-            </div>
-        </div>
-
     </div>
 </body>
 

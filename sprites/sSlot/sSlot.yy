@@ -27,7 +27,7 @@
   "origin": 0,
   "parent": {
     "name": "inventory",
-    "path": "folders/Sprites/player/inventory.yy",
+    "path": "folders/Sprites/gameplay/inventory.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

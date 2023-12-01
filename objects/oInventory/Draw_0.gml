@@ -1,15 +1,17 @@
+var inventory_width = 12 + (item_inventory_length * 16) * 2;
+
 draw_sprite_stretched(
     sInventory,
     0,
-    x - 6,
+    640 - inventory_width / 2,
     y - 6,
-    12 + (item_inventory_length * 16) * 2,
+    inventory_width,
     12 + 16 * 2
 );
 
 for (var i = 0; i < item_inventory_length; i += 1)
 {
-    var xx = x + i * 16 * 2;
+    var xx = x + i * 16 * 2 - inventory_width / 4 + 2;
 	var is_highlighted = (i == item_inventory_selected) ? 1 : 0;
 	draw_sprite_ext(sSlot, is_highlighted, xx, y, 2, 2, 0, c_white, 1);
     

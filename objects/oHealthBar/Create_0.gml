@@ -1,5 +1,5 @@
 target_object = noone;
-frame_number = 8;
+frame_number = 15;
 desired_position_y = 0;
 
 set_health = function(current_health = 0, max_health = 0) {
@@ -13,4 +13,4 @@ set_color = function(color = make_color_rgb(255, 255, 255)) {
 
 depth = -1000000;
 image_speed = 0;
-image_index = 8;
+image_index = 15;

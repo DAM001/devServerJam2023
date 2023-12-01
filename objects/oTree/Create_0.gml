@@ -34,3 +34,8 @@ tree_destroy = function() {
 health_bar = instance_create_layer(x, y, 0, oHealthBar);
 
 alarm[0] = 0.05 * room_speed;
+
+// scale (2 - 3)
+var tree_scale = 2 + irandom(10) / 10;
+image_xscale = 2;
+image_yscale = 2;
