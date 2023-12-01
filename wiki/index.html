@@ -16,6 +16,8 @@
     <!-- Include files -->
     <link rel="stylesheet" href="data/style.css">
     <script src="data/app.js"></script>
+    <script src="data/item.js"></script>
+    <script src="data/itemsList.js"></script>
 
 </head>
 
@@ -104,7 +106,7 @@
             </div>
             <div class="block-text">
                 <img src="source/sPlayerCut.png" alt="player" class="block-image" style="width: 80px; margin-right: 40px">
-                <ul class="block-list">
+                <ul class="block-list" style="margin-left: 115px;">
                     <li>Movement: W, A, S, D</li>
                     <li>Equip Item: E OR Left Mouse</li>
                     <li>Use Item: Space OR Left Mouse</li>
@@ -124,38 +126,179 @@
             <div class="block-header-2">Level 0 | Player hand</div>
             <img src="source/sPlayerCut.png" alt="player" class="item-image">
             <ul class="block-list">
-                <li id="itemHolder0">
-                    <script>
-                        addItemLink("itemHolder0", "source/sCraftingTable.png", "Crafting table");
-                    </script>
-                    : 4x Wood
+                <li>
+                    <item-link imageSource="sCraftingTable"></item-link>
+                    <div class="block-list-items">
+                        <item-link imageSource="sWood" quantity="4"></item-link>
+                    </div>
                 </li>
-                <li id="itemHolder1">
-                    <script>
-                        addItemLink("itemHolder1", "source/sTorch.png", "Torch");
-                    </script>
-                    : 1x Stick, 1x Coal
+                <li>
+                    <item-link imageSource="sTorch"></item-link>
+                    <div class="block-list-items">
+                        <item-link imageSource="sStick" quantity="1"></item-link>,
+                        <item-link imageSource="sCoal" quantity="1"></item-link>
+                    </div>
                 </li>
             </ul>
             <div class="block-header-2">Level 1 | Crafting Table</div>
             <img src="source/sCraftingTable.png" alt="player" class="item-image">
             <ul class="block-list">
-                <li>Furnace [4x stone]</li>
-                <li>Copper Anvil [4x Copper Bar]</li>
-                <li>Iron Anvil [4x Iron Bar]</li>
-                <li>Arrow [1x Stone, 1x String]</li>
-                <li>Bow [1x Wood, 2x Stick, 1x String]</li>
-                <li>Crossbow [1x Copper, 2x Stick, 1x String]</li>
-                <li>Wood Pickaxe [2x Wood, 1x Stick]</li>
-                <li>Stone Pickaxe [2x Stone, 1x Stick]</li>
-                <li>Wood Ax [2x Wood, 1x Stick]</li>
-                <li>Stone Ax [2x Stone, 1x Stick]</li>
-                <li>Wood Sword [2x Wood, 1x Stick]</li>
-                <li>Stone Sword [2x Stone, 1x Stick]</li>
+                <li>
+                    <item-link imageSource="sFurnace"></item-link>
+                    <div>
+                        <item-link imageSource="sRock" quantity="4"></item-link>
+                    </div>
+                </li>
+                <li>
+                    <item-link imageSource="sCopperAnvil"></item-link>
+                    <div>
+                        <item-link imageSource="sCopperBar" quantity="4"></item-link>
+                    </div>
+                </li>
+                <li>
+                    <item-link imageSource="sIronAnvil"></item-link>
+                    <div>
+                        <item-link imageSource="sIronBar" quantity="4"></item-link>
+                    </div>
+                </li>
+                <li>
+                    <item-link imageSource="sArrow"></item-link>
+                    <div>
+                        <item-link imageSource="sRock" quantity="1"></item-link>,
+                        <item-link imageSource="sString" quantity="1"></item-link>
+                    </div>
+                </li>
+                <li>
+                    <item-link imageSource="sBow"></item-link>
+                    <div>
+                        <item-link imageSource="sWood" quantity="1"></item-link>,
+                        <item-link imageSource="sStick" quantity="2"></item-link>,
+                        <item-link imageSource="sString" quantity="1"></item-link>
+                    </div>
+                </li>
+                <li>
+                    <item-link imageSource="sCrossbow"></item-link>
+                    <div>
+                        <item-link imageSource="sCopperBar" quantity="1"></item-link>,
+                        <item-link imageSource="sStick" quantity="2"></item-link>,
+                        <item-link imageSource="sString" quantity="1"></item-link>
+                    </div>
+                </li>
+                <li>
+                    <item-link imageSource="sWoodPickaxe"></item-link>
+                    <div>
+                        <item-link imageSource="sWood" quantity="2"></item-link>,
+                        <item-link imageSource="sStick" quantity="1"></item-link>
+                    </div>
+                </li>
+                <li>
+                    <item-link imageSource="sStonePickaxe"></item-link>
+                    <div>
+                        <item-link imageSource="sRock" quantity="2"></item-link>,
+                        <item-link imageSource="sStick" quantity="1"></item-link>
+                    </div>
+                </li>
+                <li>
+                    <item-link imageSource="sWoodAx"></item-link>
+                    <div>
+                        <item-link imageSource="sWood" quantity="2"></item-link>,
+                        <item-link imageSource="sStick" quantity="1"></item-link>
+                    </div>
+                </li>
+                <li>
+                    <item-link imageSource="sStoneAx"></item-link>
+                    <div>
+                        <item-link imageSource="sRock" quantity="2"></item-link>,
+                        <item-link imageSource="sStick" quantity="1"></item-link>
+                    </div>
+                </li>
+                <li>
+                    <item-link imageSource="sWoodSword"></item-link>
+                    <div>
+                        <item-link imageSource="sWood" quantity="2"></item-link>,
+                        <item-link imageSource="sStick" quantity="1"></item-link>
+                    </div>
+                </li>
+                <li>
+                    <item-link imageSource="sStoneSword" /></item-link>
+                    <div>
+                        <item-link imageSource="sRock" quantity="2"></item-link>,
+                        <item-link imageSource="sStick" quantity="1"></item-link>
+                    </div>
+                </li>
             </ul>
             <div class="block-header-2">Level 2 | Furnace</div>
+            <ul class="block-list">
+                <li>
+                    <item-link imageSource="sMeat"></item-link>
+                    <div class="block-list-items">
+                        <item-link imageSource="sRawMeat" quantity="1"></item-link>,
+                        <item-link imageSource="sCoal" quantity="1"></item-link>
+                    </div>
+                </li>
+                <li>
+                    <item-link imageSource="sCopperBar"></item-link>
+                    <div class="block-list-items">
+                        <item-link imageSource="sCopperOre" quantity="1"></item-link>,
+                        <item-link imageSource="sCoal" quantity="1"></item-link>
+                    </div>
+                </li>
+                <li>
+                    <item-link imageSource="sIronBar"></item-link>
+                    <div class="block-list-items">
+                        <item-link imageSource="sIronOre" quantity="1"></item-link>,
+                        <item-link imageSource="sCoal" quantity="1"></item-link>
+                    </div>
+                </li>
+            </ul>
             <div class="block-header-2">Level 3 | Copper Anvil</div>
+            <ul class="block-list">
+                <li>
+                    <item-link imageSource="sCopperPickaxe"></item-link>
+                    <div class="block-list-items">
+                        <item-link imageSource="sCopperBar" quantity="2"></item-link>,
+                        <item-link imageSource="sStick" quantity="1"></item-link>
+                    </div>
+                </li>
+                <li>
+                    <item-link imageSource="sCopperAx"></item-link>
+                    <div class="block-list-items">
+                        <item-link imageSource="sCopperBar" quantity="2"></item-link>,
+                        <item-link imageSource="sStick" quantity="1"></item-link>
+                    </div>
+                </li>
+                <li>
+                    <item-link imageSource="sCopperSword"></item-link>
+                    <div class="block-list-items">
+                        <item-link imageSource="sCopperBar" quantity="2"></item-link>,
+                        <item-link imageSource="sStick" quantity="1"></item-link>
+                    </div>
+                </li>
+            </ul>
             <div class="block-header-2">Level 4 | Iron Anvil</div>
+            <ul class="block-list">
+                <li>
+                    <item-link imageSource="sIronPickaxe"></item-link>
+                    <div class="block-list-items">
+                        <item-link imageSource="sIronBar" quantity="2"></item-link>,
+                        <item-link imageSource="sStick" quantity="1"></item-link>
+                    </div>
+                </li>
+                <li>
+                    <item-link imageSource="sIronAx"></item-link>
+                    <div class="block-list-items">
+                        <item-link imageSource="sIronBar" quantity="2"></item-link>,
+                        <item-link imageSource="sStick" quantity="1"></item-link>
+                    </div>
+                </li>
+                <li>
+                    <item-link imageSource="sIronSword"></item-link>
+                    <div class="block-list-items">
+                        <item-link imageSource="sIronBar" quantity="2"></item-link>,
+                        <item-link imageSource="sStick" quantity="1"></item-link>
+                    </div>
+                </li>
+            </ul>
         </div>
 
         <div class="block" id="mobs">

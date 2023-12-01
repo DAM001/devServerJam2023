@@ -1,9 +1,16 @@
+@media only screen and (min-width: 900px) {
+    .item-folder {
+        grid-template-columns: 2fr 1.3fr 1.5fr;
+    }
+}
+
 :root {
     --color-dark: #111111;
     --color-dark-2: #191919;
     --color-dark-grey: #141C23;
     --color-light: #ECF0F1;
     --color-grey: #95A5A6;
+    --color-grey-2: #606a6b;
     --color-shadow: #000000;
 }
 
@@ -12,6 +19,30 @@
     padding: 0;
     font-family: Consolas, monaco, monospace;
     color: var(--color-light);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-dark);
+    background-image: url("../source/background/background.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+li {
+    list-style-type: none;
+    margin-bottom: 10px;
+    padding: 0px 3px;
+    border-left: 5px solid var(--color-grey-2);
+}
+
+item-link {
+    white-space: nowrap;
 }
 
 .a-1 {
@@ -26,19 +57,6 @@
     margin-left: 20px;
     padding: 3px 5px;
     font-size: 16px;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background-color: var(--color-dark);
-    background-image: url("../source/background/background.png");
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .header {
@@ -153,19 +171,30 @@ body {
 }
 
 .block-list {
-    margin-left: 40px;
+    margin-left: 20px;
+}
+
+.block-list li>item-link:first-child {
+    display: inline-block;
+    background-color: var(--color-grey-2);
+    padding: 5px 10px 5px 5px;
+    margin-left: -3px;
+}
+
+.block-list-items {
+    margin: 5px 0 10px 0;
 }
 
 .block-list-image {
-    height: 14px;
-    width: 14px;
-    margin-right: 5px;
+    height: 16px;
+    width: 16px;
+    margin: 0 5px -4px 0;
 }
 
 .item-folder {
     display: grid;
     margin-left: 80px;
-    grid-template-columns: 2fr 1.3fr 1.5fr;
+    /*grid-template-columns: 2fr 1.3fr 1.5fr;*/
 }
 
 .item-image {
@@ -174,11 +203,11 @@ body {
 }
 
 .item-element {
-    margin: 0 5px;
+    margin: 0 10px;
     font-size: 12px;
 }
 
 .item-header {
-    font-size: 16px;
-    margin-bottom: 10px;
+    font-size: 18px;
+    margin: 10px 0 5px 0;
 }
