@@ -33,24 +33,20 @@ function createItemBlock(item) {
         const craftingElement = createItemElement("div", "item-element", "Crafting:");
         itemFolder.appendChild(craftingElement);
 
-        // Append crafting data to the crafting element
         item.crafting.forEach((craftingData, index) => {
-            // Create a new item-link element for each crafting item
             const itemLink = document.createElement('item-link');
             itemLink.setAttribute('imageSource', craftingData[0]);
+            if (index > 0) {
+                itemLink.setAttribute('quantity', craftingData[1]);
+            }
             craftingElement.appendChild(itemLink);
 
             if (index === 0) {
                 const colon = document.createTextNode(': ');
                 craftingElement.appendChild(colon);
-            } else {
-                const quantityTextNode = document.createTextNode(` ${craftingData[1]}x`);
-                craftingElement.appendChild(quantityTextNode);
-
-                if (index < item.crafting.length - 1) {
-                    const comma = document.createTextNode(', ');
-                    craftingElement.appendChild(comma);
-                }
+            } else if (index < item.crafting.length - 1) {
+                const comma = document.createTextNode(', ');
+                craftingElement.appendChild(comma);
             }
         });
     }
@@ -61,14 +57,11 @@ function createItemBlock(item) {
         const resourceElement = createItemElement("div", "item-element", "Resource:");
         itemFolder.appendChild(resourceElement);
 
-        // Append item links to the stats element
         item.resource.forEach((element, index) => {
             const itemLink = document.createElement('item-link');
             itemLink.setAttribute('imageSource', element);
 
             resourceElement.appendChild(itemLink);
-
-            // Add a comma after each itemLink except the last one
             if (index < item.resource.length - 1) {
                 const comma = document.createTextNode(', ');
                 resourceElement.appendChild(comma);
@@ -80,9 +73,7 @@ function createItemBlock(item) {
     if (item.stats) {
         const statsElement = createItemElement("div", "item-element", "Stats:");
 
-        // Iterate through each element in item.stats
         item.stats.forEach(stat => {
-            // Create a new div for each stat and append it to the statsElement
             const statDiv = document.createElement("div");
             statDiv.textContent = stat;
             statsElement.appendChild(statDiv);
