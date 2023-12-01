@@ -9,7 +9,7 @@ var _down = keyboard_check(ord("S"));
 
 my_speed_modifier = 1;
 if (keyboard_check(vk_shift)) {
-	my_speed_modifier = 2;
+	my_speed_modifier = 1.4;
 }
 
 //calculate the move direction
@@ -99,9 +99,9 @@ change_active_inventory = function (active_index)
 	for (var i = 0; i < item_inventory_length; i += 1) {
 		if (item_inventory[i] >= 0) {
 			if (i == item_inventory_selected) {
-				instance_activate_object(item_inventory_items[i]);
+				item_inventory_items[i].item_show();
 			} else {
-				instance_deactivate_object(item_inventory_items[i]);
+				item_inventory_items[i].item_hide();
 			}
 		}
 	}

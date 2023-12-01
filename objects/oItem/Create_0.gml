@@ -23,13 +23,29 @@ alarm[0] = 0.1 * room_speed;
 image_xscale = 2;
 image_yscale = 2;
 
+hide_attack_cooloff = function() {
+	attack_cooloff_bar.set_health(0, attack_cooloff);
+}
+
 item_equip = function() {
 	equipped = true;
 }
 
 item_unequip = function() {
+	hide_attack_cooloff();
+
 	equipped = false;
 	
 	x += irandom(20) - 10;
 	y += irandom(20) - 10;
+}
+
+item_hide = function() {
+	hide_attack_cooloff();
+	
+	instance_deactivate_object(self);
+}
+
+item_show = function() {
+	instance_activate_object(self);
 }
