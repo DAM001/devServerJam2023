@@ -25,7 +25,7 @@ window.onload = function() {
             index: 1,
             imagePath: "sStick",
             description: "A crafting resource, used for most of the tools",
-            resource: ["sWoodPickaxe", "sWoodAx", "sWoodSword", "sTorch"],
+            resource: ["sTorch", "sWoodPickaxe", "sWoodAx", "sWoodSword", "sStonePickaxe", "sStoneAx", "sStoneSword", "sCopperPickaxe", "sCopperAx", "sCopperSword", "sIronPickaxe", "sIronAx", "sIronSword", ],
             howToGet: "Spawns randomly on the ground; Trees drop when chopped 50%",
         },
         {
