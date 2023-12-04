@@ -1,3 +1,4 @@
+// check for crafting stations
 if keyboard_check_pressed(vk_tab)
 {
 	is_crafting = !is_crafting;
@@ -6,4 +7,3 @@ if keyboard_check_pressed(vk_tab)
 		cursor_position = 0;
 	}
 }
-

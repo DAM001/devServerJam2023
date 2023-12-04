@@ -5,10 +5,25 @@ var width = 300;
 var height = 500;
 
 var number_of_items = 0;
+var starter_crafting_index = 0;
 
 // crafting
 var list_of_items = [];
 var number_of_items_have = 0;
+
+// crafting level
+var player = instance_nearest(x, y, oPlayer);
+crafting_level = 0;
+
+with (oItem) {
+    var distance = point_distance(x, y, player.x, player.y);
+	
+    if (distance < item_inventory_pickup_range) {
+		if (crafting_station_level > other.crafting_level) {
+			other.crafting_level = crafting_station_level;
+		}
+    }
+}
 
 if (is_crafting) {
 	// background
@@ -21,21 +36,13 @@ if (is_crafting) {
 	    height
 	);
 	
-	// cursor
-	var cursor_position_x = position_x - (width / 2) + 24;
-	var cursor_position_y = position_y - (height / 2) + 30 + cursor_position * (32 + 6);
-	var cursor_craftable = has_all_items(cursor_position) ? 1 : 0;
-	draw_sprite_ext(sIndicatorArrow, cursor_craftable, cursor_position_x, cursor_position_y, 2, 2, 0, c_white, 1);
-	
 	// craftings
 	for (var i = 0; i < array_length(item_crafting_recepies); i += 1) {
 		if (item_crafting_recepies[i][0][1] == crafting_level) {
-			number_of_items++;
-			
 			// draw item
 			var item_sprite = item_sprites[item_crafting_recepies[i][0][0]];
 			var item_position_x = position_x - (width / 2) + 60;
-			var item_position_y = position_y - (height / 2) + 30 + i * (32 + 12);
+			var item_position_y = position_y - (height / 2) + 30 + number_of_items * (32 + 6);
 			var item_scale = 4;
 			draw_sprite_ext(item_sprite, 0, item_position_x, item_position_y, item_scale, item_scale, 0, c_white, 1);
 		
@@ -54,6 +61,19 @@ if (is_crafting) {
 			
 			// draw decor line
 			//draw_sprite_stretched(sInventory, 0, item_position_x - 20, item_position_y + 20, width - 80, 4);
+			
+			// ???
+			if (number_of_items == 0) {
+				starter_crafting_index = i;
+			}
+			
+			number_of_items++;
+			
+			// cursor
+			var cursor_position_x = position_x - (width / 2) + 24;
+			var cursor_position_y = position_y - (height / 2) + 30 + cursor_position * (32 + 6);
+			var cursor_craftable = has_all_items(cursor_position + starter_crafting_index) ? 1 : 0;
+			draw_sprite_ext(sIndicatorArrow, cursor_craftable, cursor_position_x, cursor_position_y, 2, 2, 0, c_white, 1);
 		}
 	}
 }
@@ -135,7 +155,7 @@ craft_item = function(craft_item_index = -1) {
 // ---------- NAVIGATION ----------
 
 if (keyboard_check_pressed(vk_enter)) {
-	craft_item(cursor_position);
+	craft_item(cursor_position + starter_crafting_index);
 }
 
 if (keyboard_check_pressed(vk_down)) {

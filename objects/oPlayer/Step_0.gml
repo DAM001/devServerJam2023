@@ -55,7 +55,8 @@ if (_xinput == 0 && _yinput == 0)
 }
 
 // --------- ITEM HANDLING ---------
-if (keyboard_check_pressed(ord("F")) or mouse_check_button_pressed(mb_right)) {
+if (!is_crafting && (keyboard_check_pressed(ord("Q")) 
+|| keyboard_check_pressed(vk_down) || mouse_check_button_pressed(mb_right))) {
 	if (item_inventory[item_inventory_selected] >= 0) {
 		item_inventory[item_inventory_selected] = -1;
 
@@ -63,7 +64,8 @@ if (keyboard_check_pressed(ord("F")) or mouse_check_button_pressed(mb_right)) {
 	}
 }
 
-if (keyboard_check_pressed(ord("E")) or mouse_check_button_pressed(mb_left)) {
+if (!is_crafting && (keyboard_check_pressed(ord("E")) || keyboard_check_pressed(vk_up) 
+|| mouse_check_button_pressed(mb_left))) {
     var nearestItem = noone;
     var nearestDistance = 10000;
     
@@ -108,13 +110,12 @@ change_active_inventory = function (active_index)
 }
 
 for (var i = 0; i < item_inventory_length; i += 1) {
-	if (keyboard_check_pressed(ord(i + 1))) {
+	if (!is_crafting && (keyboard_check_pressed(ord(i + 1)))) {
 		change_active_inventory(i);
 	}
 }
 
-if mouse_wheel_up()
-{
+if (!is_crafting && (mouse_wheel_up() || keyboard_check_pressed(vk_right))) {
     item_inventory_selected++;
 	if (item_inventory_selected >= item_inventory_length - 1) {
 		item_inventory_selected = item_inventory_length - 1;
@@ -123,8 +124,7 @@ if mouse_wheel_up()
 	change_active_inventory(item_inventory_selected);
 }
 
-if mouse_wheel_down()
-{
+if (!is_crafting && (mouse_wheel_down() || keyboard_check_pressed(vk_left))) {
     item_inventory_selected--;
 	if (item_inventory_selected < 0) {
 		item_inventory_selected = 0;

@@ -16,6 +16,10 @@ attack_cooloff = 10; // 1 is 100ms
 attack_cooloff_current = 0;
 attack_cooloff_bar = instance_create_layer(x, y, 0, oHealthBar);
 
+// crafting station
+crafting_station = false;
+crafting_station_level = -1;
+
 // setup item properties
 alarm[0] = 0.1 * room_speed;
 
