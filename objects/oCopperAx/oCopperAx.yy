@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "oSword",
+  "name": "oCopperAx",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,},
   ],
@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sWoodSword",
-    "path": "sprites/sWoodSword/sWoodSword.yy",
+    "name": "sCopperAx",
+    "path": "sprites/sCopperAx/sCopperAx.yy",
   },
   "spriteMaskId": null,
   "visible": true,

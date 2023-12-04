@@ -133,6 +133,7 @@ window.onload = function() {
             index: 13,
             imagePath: "sTorch",
             description: "Description",
+            stats: [" Durability: 40 (hit)"],
             crafting: [
                 ["sPlayer", "0"],
                 ["sCoal", "1"],
@@ -206,7 +207,7 @@ window.onload = function() {
             index: 20,
             imagePath: "sBow",
             description: "Weak range weapon, useful for killing enemies from a distance",
-            stats: [" Durability: 40", "Range: 70", " Enemy damage: 4"],
+            stats: [" Durability: 40 (shots)", " Charge: 0.7 (sec)", "Range: 10 (tiles)", " Enemy damage: 4 (dmg)"],
             crafting: [
                 ["sCraftingTable", "1"],
                 ["sWood", "1"],
@@ -219,7 +220,7 @@ window.onload = function() {
             index: 21,
             imagePath: "sCrossbow",
             description: "Strong range weapon, useful for killing enemies from a distance",
-            stats: [" Durability: 40", "Range: 100", " Enemy damage: 7"],
+            stats: [" Durability: 60 (shots)", " Charge: 1.0 (sec)", "Range: 15 (tiles)", " Enemy damage: 7 (dmg)"],
             crafting: [
                 ["sCraftingTable", "1"],
                 ["sCopperBar", "1"],
@@ -232,7 +233,7 @@ window.onload = function() {
             index: 22,
             imagePath: "sWoodPickaxe",
             description: "A tool for mining stones and ores",
-            stats: [" Durability: 40", " Enemy damage: 1", " Mining damage: 2", " Tree damage: 1"],
+            stats: [" Durability: 30 (hit)", " Cooldown: 1.0 (sec)", " Enemy damage: 1 (dmg)", " Mining damage: 2 (dmg)", " Tree damage: 1 (dmg)"],
             crafting: [
                 ["sCraftingTable", "1"],
                 ["sWood", "2"],
@@ -244,7 +245,7 @@ window.onload = function() {
             index: 23,
             imagePath: "sStonePickaxe",
             description: "A tool for mining stones and ores",
-            stats: [" Durability: 40", " Enemy damage: 1", " Mining damage: 3", " Tree damage: 1"],
+            stats: [" Durability: 40 (hit)", " Cooldown: 0.8 (sec)", " Enemy damage: 1 (dmg)", " Mining damage: 3 (dmg)", " Tree damage: 1 (dmg)"],
             crafting: [
                 ["sCraftingTable", "1"],
                 ["sRock", "2"],
@@ -256,7 +257,7 @@ window.onload = function() {
             index: 24,
             imagePath: "sCopperPickaxe",
             description: "A tool for mining stones and ores",
-            stats: [" Durability: 40", " Enemy damage: 1", " Mining damage: 4", " Tree damage: 1"],
+            stats: [" Durability: 50 (hit)", " Cooldown: 0.6 (sec)", " Enemy damage: 1 (dmg)", " Mining damage: 4 (dmg)", " Tree damage: 1 (dmg)"],
             crafting: [
                 ["sCraftingTable", "1"],
                 ["sCopperBar", "2"],
@@ -268,7 +269,7 @@ window.onload = function() {
             index: 25,
             imagePath: "sIronPickaxe",
             description: "A tool for mining stones and ores",
-            stats: [" Durability: 40", " Enemy damage: 1", " Mining damage: 5", " Tree damage: 1"],
+            stats: [" Durability: 60 (hit)", " Cooldown: 0.4 (sec)", " Enemy damage: 1 (dmg)", " Mining damage: 5 (dmg)", " Tree damage: 1 (dmg)"],
             crafting: [
                 ["sCraftingTable", "1"],
                 ["sIronBar", "2"],
@@ -280,7 +281,7 @@ window.onload = function() {
             index: 26,
             imagePath: "sWoodAx",
             description: "An item made for gathering wood resources efficiently",
-            stats: [" Durability: 40", " Enemy damage: 1", " Mining damage: 1", " Tree damage: 2"],
+            stats: [" Durability: 30 (hit)", " Cooldown: 1.0 (sec)", " Enemy damage: 1 (dmg)", " Mining damage: 1 (dmg)", " Tree damage: 2 (dmg)"],
             crafting: [
                 ["sCraftingTable", "1"],
                 ["sWood", "2"],
@@ -292,7 +293,7 @@ window.onload = function() {
             index: 27,
             imagePath: "sStoneAx",
             description: "An item made for gathering wood resources efficiently",
-            stats: [" Durability: 40", " Enemy damage: 1", " Mining damage: 1", " Tree damage: 3"],
+            stats: [" Durability: 40 (hit)", " Cooldown: 0.8 (sec)", " Enemy damage: 1 (dmg)", " Mining damage: 1 (dmg)", " Tree damage: 3 (dmg)"],
             crafting: [
                 ["sCraftingTable", "1"],
                 ["sRock", "2"],
@@ -304,7 +305,7 @@ window.onload = function() {
             index: 28,
             imagePath: "sCopperAx",
             description: "An item made for gathering wood resources efficiently",
-            stats: [" Durability: 40", " Enemy damage: 1", " Mining damage: 1", " Tree damage: 4"],
+            stats: [" Durability: 50 (hit)", " Cooldown: 0.6 (sec)", " Enemy damage: 1 (dmg)", " Mining damage: 1 (dmg)", " Tree damage: 4 (dmg)"],
             crafting: [
                 ["sCraftingTable", "1"],
                 ["sCopperBar", "2"],
@@ -316,7 +317,7 @@ window.onload = function() {
             index: 29,
             imagePath: "sIronAx",
             description: "An item made for gathering wood resources efficiently",
-            stats: [" Durability: 40", " Enemy damage: 1", " Mining damage: 1", " Tree damage: 5"],
+            stats: [" Durability: 60 (hit)", " Cooldown: 0.4 (sec)", " Enemy damage: 1 (dmg)", " Mining damage: 1 (dmg)", " Tree damage: 5 (dmg)"],
             crafting: [
                 ["sCraftingTable", "1"],
                 ["sIronBar", "2"],
@@ -328,7 +329,7 @@ window.onload = function() {
             index: 30,
             imagePath: "sWoodSword",
             description: "A tool for fighting against living creatures",
-            stats: [" Durability: 40", " Enemy damage: 2", " Mining damage: 1", " Tree damage: 1"],
+            stats: [" Durability: 30 (hit)", " Cooldown: 1.0 (sec)", " Enemy damage: 2 (dmg)", " Mining damage: 1 (dmg)", " Tree damage: 1 (dmg)"],
             crafting: [
                 ["sCraftingTable", "1"],
                 ["sWood", "2"],
@@ -340,7 +341,7 @@ window.onload = function() {
             index: 31,
             imagePath: "sStoneSword",
             description: "A tool for fighting against living creatures",
-            stats: [" Durability: 40", " Enemy damage: 3", " Mining damage: 1", " Tree damage: 1"],
+            stats: [" Durability: 40 (hit)", " Cooldown: 0.8 (sec)", " Enemy damage: 3 (dmg)", " Mining damage: 1 (dmg)", " Tree damage: 1 (dmg)"],
             crafting: [
                 ["sCraftingTable", "1"],
                 ["sRock", "2"],
@@ -352,7 +353,7 @@ window.onload = function() {
             index: 32,
             imagePath: "sCopperSword",
             description: "A tool for fighting against living creatures",
-            stats: [" Durability: 40", " Enemy damage: 4", " Mining damage: 1", " Tree damage: 1"],
+            stats: [" Durability: 50 (hit)", " Cooldown: 0.6 (sec)", " Enemy damage: 4 (dmg)", " Mining damage: 1 (dmg)", " Tree damage: 1 (dmg)"],
             crafting: [
                 ["sCraftingTable", "1"],
                 ["sCopperBar", "2"],
@@ -364,7 +365,7 @@ window.onload = function() {
             index: 33,
             imagePath: "sIronSword",
             description: "A tool for fighting against living creatures",
-            stats: [" Durability: 40", " Enemy damage: 5", " Mining damage: 1", " Tree damage: 1"],
+            stats: [" Durability: 60 (hit)", " Cooldown: 0.4 (sec)", " Enemy damage: 5 (dmg)", " Mining damage: 1 (dmg)", " Tree damage: 1 (dmg)"],
             crafting: [
                 ["sCraftingTable", "1"],
                 ["sIronBar", "2"],

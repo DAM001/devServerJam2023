@@ -1,4 +1,4 @@
-// Item Definitions
+// item index definitions
 #macro item_none 0
 #macro item_stick 1
 #macro item_rock 2
@@ -34,7 +34,7 @@
 #macro item_copper_sword 32
 #macro item_iron_sword 33
 
-// Other
+// list of item sprites
 globalvar item_sprites; 
 item_sprites = [];
 
@@ -73,6 +73,7 @@ item_sprites[item_stone_sword] = sStoneSword;
 item_sprites[item_copper_sword] = sCopperSword;
 item_sprites[item_iron_sword] = sIronSword;
 
+// list of item objects
 globalvar item_objects; 
 item_objects = [];
 
@@ -80,36 +81,36 @@ item_objects[item_none] = oItem;
 item_objects[item_stick] = oStick;
 item_objects[item_rock] = oRock;
 item_objects[item_wood] = oWood;
-//item_objects[item_grass] = oGrass;
-//item_objects[item_raw_meat] = oRawMeat;
-//item_objects[item_meat] = oMeat;
-//item_objects[item_string] = oString;
+item_objects[item_grass] = oGrass;
+item_objects[item_raw_meat] = oRawMeat;
+item_objects[item_meat] = oMeat;
+item_objects[item_string] = oString;
 item_objects[item_coal] = oCoal;
-//item_objects[item_copper_ore] = oCopperOre;
-//item_objects[item_copper_bar] = oCopperBar;
-//item_objects[item_iron_ore] = oIronOre;
-//item_objects[item_iron_bar] = oIronBar;
+item_objects[item_copper_ore] = oCopperOre;
+item_objects[item_copper_bar] = oCopperBar;
+item_objects[item_iron_ore] = oIronOre;
+item_objects[item_iron_bar] = oIronBar;
 item_objects[item_torch] = oTorch;
-//item_objects[item_campfire] = oCampfire;
-//item_objects[item_crafting_table] = oCraftingTable;
-//item_objects[item_furnace] = oFurnace;
-//item_objects[item_copper_anvil] = oCopperAnvil;
-//item_objects[item_iron_anvil] = oIronAnvil;
-//item_objects[item_arrow] = oArrow;
-//item_objects[item_bow] = oBow;
-//item_objects[item_crossbow] = oCrossbow;
-//item_objects[item_wood_pickaxe] = oWoodPickaxe;
-//item_objects[item_stone_pickaxe] = oStonePickaxe;
-//item_objects[item_copper_pickaxe] = oCopperPickaxe;
-//item_objects[item_iron_pickaxe] = oIronPickaxe;
+item_objects[item_campfire] = oCampfire;
+item_objects[item_crafting_table] = oCraftingTable;
+item_objects[item_furnace] = oFurnace;
+item_objects[item_copper_anvil] = oCopperAnvil;
+item_objects[item_iron_anvil] = oIronAnvil;
+item_objects[item_arrow] = oArrow;
+item_objects[item_bow] = oBow;
+item_objects[item_crossbow] = oCrossbow;
+item_objects[item_wood_pickaxe] = oWoodPickaxe;
+item_objects[item_stone_pickaxe] = oStonePickaxe;
+item_objects[item_copper_pickaxe] = oCopperPickaxe;
+item_objects[item_iron_pickaxe] = oIronPickaxe;
 item_objects[item_wood_ax] = oWoodAx;
-//item_objects[item_stone_ax] = oStoneAx;
-//item_objects[item_copper_ax] = oCopperAx;
-//item_objects[item_iron_ax] = oIronAx;
-//item_objects[item_wood_sword] = oWoodSword;
-//item_objects[item_stone_sword] = oStoneSword;
-//item_objects[item_copper_sword] = oCopperSword;
-//item_objects[item_iron_sword] = oIronSword;
+item_objects[item_stone_ax] = oStoneAx;
+item_objects[item_copper_ax] = oCopperAx;
+item_objects[item_iron_ax] = oIronAx;
+item_objects[item_wood_sword] = oWoodSword;
+item_objects[item_stone_sword] = oStoneSword;
+item_objects[item_copper_sword] = oCopperSword;
+item_objects[item_iron_sword] = oIronSword;
 
 
 // CRAFTING RECEPIES
@@ -118,7 +119,32 @@ item_objects[item_wood_ax] = oWoodAx;
 globalvar item_crafting_recepies;
 item_crafting_recepies = [];
 
+// level 0 - player hand
 item_crafting_recepies[0] = [[item_crafting_table, 0], [item_wood, 4]];
 item_crafting_recepies[1] = [[item_torch, 0], [item_stick, 1], [item_coal, 1]];
+// level 1 - crafting table
 item_crafting_recepies[2] = [[item_furnace, 1], [item_rock, 4]];
+item_crafting_recepies[3] = [[item_copper_anvil, 1], [item_copper_bar, 4]];
+item_crafting_recepies[4] = [[item_iron_anvil, 1], [item_iron_bar, 4]];
+item_crafting_recepies[5] = [[item_arrow, 1], [item_rock, 1], [item_stick, 1]];
+item_crafting_recepies[6] = [[item_bow, 1], [item_wood, 1], [item_stick, 2], [item_string, 1]];
+item_crafting_recepies[7] = [[item_crossbow, 1], [item_copper_bar, 1], [item_stick, 2], [item_string, 1]];
+item_crafting_recepies[8] = [[item_wood_pickaxe, 1], [item_wood, 2], [item_stick, 1]];
+item_crafting_recepies[9] = [[item_stone_pickaxe, 1], [item_rock, 2], [item_stick, 1]];
+item_crafting_recepies[10] = [[item_wood_ax, 1], [item_wood, 2], [item_stick, 1]];
+item_crafting_recepies[11] = [[item_stone_ax, 1], [item_rock, 2], [item_stick, 1]];
+item_crafting_recepies[12] = [[item_wood_sword, 1], [item_wood, 2], [item_stick, 1]];
+item_crafting_recepies[13] = [[item_stone_sword, 1], [item_rock, 2], [item_stick, 1]];
+// level 2 - furnace
+item_crafting_recepies[14] = [[item_meat, 2], [item_raw_meat, 1], [item_coal, 1]];
+item_crafting_recepies[15] = [[item_copper_bar, 2], [item_copper_ore, 1], [item_coal, 1]];
+item_crafting_recepies[16] = [[item_iron_bar, 2], [item_iron_ore, 1], [item_coal, 1]];
+// level 3 - copper anvil
+item_crafting_recepies[17] = [[item_copper_pickaxe, 3], [item_copper_bar, 2], [item_stick, 1]];
+item_crafting_recepies[18] = [[item_copper_ax, 3], [item_copper_bar, 2], [item_stick, 1]];
+item_crafting_recepies[19] = [[item_copper_sword, 3], [item_copper_bar, 2], [item_stick, 1]];
+// level 4 - iron anvil
+item_crafting_recepies[20] = [[item_iron_pickaxe, 4], [item_iron_bar, 2], [item_stick, 1]];
+item_crafting_recepies[21] = [[item_iron_ax, 4], [item_iron_bar, 2], [item_stick, 1]];
+item_crafting_recepies[22] = [[item_iron_sword, 4], [item_iron_bar, 2], [item_stick, 1]];
 

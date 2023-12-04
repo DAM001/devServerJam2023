@@ -1,9 +1,9 @@
 /// @description Item setup
-item_index = item_wood_ax;
+item_index = item_stone_ax;
 
 usable = true;
 durability = 40;
-attack_cooloff = 10; // 1 is 100ms
+attack_cooloff = 8; // 1 is 100ms
 
 attack_tree_damage = 2;
 attack_mining_damage = 1;
