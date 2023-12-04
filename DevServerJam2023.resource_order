@@ -28,6 +28,7 @@
     {"name":"player","order":9,"path":"folders/Sprites/player.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
+    {"name":"base","order":3,"path":"folders/Objects/map/base.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"oBow","order":25,"path":"objects/oBow/oBow.yy",},
@@ -69,6 +70,7 @@
     {"name":"sTorch","order":14,"path":"sprites/sTorch/sTorch.yy",},
     {"name":"sIndicatorArrow","order":3,"path":"sprites/sIndicatorArrow/sIndicatorArrow.yy",},
     {"name":"oCopperPickaxe","order":29,"path":"objects/oCopperPickaxe/oCopperPickaxe.yy",},
+    {"name":"oRockOre","order":2,"path":"objects/oRockOre/oRockOre.yy",},
     {"name":"sIronOre","order":12,"path":"sprites/sIronOre/sIronOre.yy",},
     {"name":"oCopperAnvil","order":22,"path":"objects/oCopperAnvil/oCopperAnvil.yy",},
     {"name":"oCopperSword","order":35,"path":"objects/oCopperSword/oCopperSword.yy",},

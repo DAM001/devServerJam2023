@@ -33,9 +33,9 @@ window.onload = function() {
             index: 2,
             imagePath: "sRock",
             description: "The basic starter tool! And a crafting resource, mainly used for the stone tools.",
-            stats: [" Durability: unbreakable", " Cooldown: 1.0 (sec)", " Enemy damage: 1.0 (dmg)", " Mining damage: 1.0 (dmg)", " Tree damage: 1.0 (dmg)"],
+            stats: [" Durability: unbreakable", " Cooldown: 1.0 (sec)", " Enemy damage: 1.0 (dmg)", " Mining damage: 0.5 (dmg)", " Tree damage: 1.0 (dmg)"],
             resource: ["sStonePickaxe", "sStoneAx", "sStoneSword", "sFurnace", "sArrow"],
-            howToGet: "Spawns randomly on the ground; Stone with ores drops when mined (75% chance)"
+            howToGet: "Spawns randomly on the ground; Stone with ores drops when mined (100% chance)"
         },
         {
             containerId: "resources",
