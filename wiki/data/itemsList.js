@@ -26,15 +26,16 @@ window.onload = function() {
             imagePath: "sStick",
             description: "A crafting resource, used for most of the tools",
             resource: ["sTorch", "sWoodPickaxe", "sWoodAx", "sWoodSword", "sStonePickaxe", "sStoneAx", "sStoneSword", "sCopperPickaxe", "sCopperAx", "sCopperSword", "sIronPickaxe", "sIronAx", "sIronSword", ],
-            howToGet: "Spawns randomly on the ground; Trees drop when chopped 50%",
+            howToGet: "Spawns randomly on the ground; Trees drop when chopped (50% chance)",
         },
         {
-            containerId: "resources",
+            containerId: "tools",
             index: 2,
             imagePath: "sRock",
-            description: "A crafting resource, mainly used for the stone tools",
+            description: "The basic starter tool! And a crafting resource, mainly used for the stone tools.",
+            stats: [" Durability: unbreakable", " Cooldown: 1.0 (sec)", " Enemy damage: 1.0 (dmg)", " Mining damage: 1.0 (dmg)", " Tree damage: 1.0 (dmg)"],
             resource: ["sStonePickaxe", "sStoneAx", "sStoneSword", "sFurnace", "sArrow"],
-            howToGet: "Spawns randomly on the ground; Stone with ores drops when mined"
+            howToGet: "Spawns randomly on the ground; Stone with ores drops when mined (75% chance)"
         },
         {
             containerId: "resources",

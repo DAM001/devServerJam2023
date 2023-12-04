@@ -20,7 +20,7 @@ var closest_crafting_station = noone;
 with (oItem) {
     var distance = point_distance(x, y, player.x, player.y);
 	
-    if (distance < item_inventory_pickup_range) {
+    if (!equipped && distance < item_inventory_pickup_range) {
 		if (distance < closest_crafting_station_distance) {
 			closest_crafting_station_distance = distance;
 			closest_crafting_station = id;
