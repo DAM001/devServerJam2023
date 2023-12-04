@@ -15,12 +15,19 @@ var number_of_items_have = 0;
 var player = instance_nearest(x, y, oPlayer);
 crafting_level = 0;
 
+var closest_crafting_station_distance = 10000;
+var closest_crafting_station = noone;
 with (oItem) {
     var distance = point_distance(x, y, player.x, player.y);
 	
     if (distance < item_inventory_pickup_range) {
-		if (crafting_station_level > other.crafting_level) {
-			other.crafting_level = crafting_station_level;
+		if (distance < closest_crafting_station_distance) {
+			closest_crafting_station_distance = distance;
+			closest_crafting_station = id;
+		}
+		
+		if (closest_crafting_station.crafting_station_level > other.crafting_level) {
+			other.crafting_level = closest_crafting_station.crafting_station_level;
 		}
     }
 }
