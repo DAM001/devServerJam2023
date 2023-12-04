@@ -1,10 +1,14 @@
-ovar position_x = camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]) / 2;
+var position_x = camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]) / 2;
 var position_y = camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0]) / 2;
 
 var width = 300;
 var height = 500;
 
 var number_of_items = 0;
+
+// crafting
+var list_of_items = [];
+var number_of_items_have = 0;
 
 if (is_crafting) {
 	// background
@@ -20,7 +24,8 @@ if (is_crafting) {
 	// cursor
 	var cursor_position_x = position_x - (width / 2) + 24;
 	var cursor_position_y = position_y - (height / 2) + 30 + cursor_position * (32 + 6);
-	draw_sprite_ext(sIndicatorArrow, 0, cursor_position_x, cursor_position_y, 2, 2, 0, c_white, 1);
+	var cursor_craftable = has_all_items(cursor_position) ? 1 : 0;
+	draw_sprite_ext(sIndicatorArrow, cursor_craftable, cursor_position_x, cursor_position_y, 2, 2, 0, c_white, 1);
 	
 	// craftings
 	for (var i = 0; i < array_length(item_crafting_recepies); i += 1) {
@@ -54,59 +59,79 @@ if (is_crafting) {
 }
 
 // ---------- CRAFT ITEM ----------
-craft_item = function(craft_item_index = -1) {
-	var list_of_items = [];
-	var number_of_items_have = 0;
-	for (var i = 1; i < array_length(item_crafting_recepies[craft_item_index]); i += 1) {
-		for (var j = 0; j < item_crafting_recepies[craft_item_index][i][1]; j += 1) {
-			list_of_items[array_length(list_of_items)] = item_crafting_recepies[craft_item_index][i][0];
-		}
-	}
-	
-	// check if player has all the items
-	for (var i = 0; i < array_length(list_of_items); i += 1) {
-		for (var j = 0; j < item_inventory_length; j += 1) {
-			if (item_inventory[j] >= 0) {
-				var item_index = item_inventory[j];
-				if (item_index == list_of_items[i]) { 
-					number_of_items_have++;
-				}
-			}
-		}
-	}
-	
-	// check if the item is craftable
-	if (number_of_items_have == array_length(list_of_items)) {
-		//remove items from the inventory
-		for (var i = 0; i < array_length(list_of_items); i += 1) {
-			for (var j = 0; j < item_inventory_length; j += 1) {
-				if (item_inventory[j] >= 0) {
-					var item_index = item_inventory[j];
-					if (item_index == list_of_items[i]) { 
-						item_inventory[j] = -1;
-						
-						// check the currently in hand item, if its in the craft then destroy it
-						if (j == item_inventory_selected) {
-							instance_destroy(item_inventory_active);	
-						}
-					}
-				}
-			}
-		}
-	
-		// create item
-		var player = instance_nearest(x, y, oPlayer);
-		if (instance_exists(player)) {
-			var crafted_item = item_objects[item_crafting_recepies[craft_item_index][0][0]];
-			var random_x = irandom(20) - 10;
-			var random_y = irandom(20) - 10;
-			instance_create_layer(player.x + random_x, player.y + random_y, 0, crafted_item);
-		}
-		
-		//close the crafting tab
-		is_crafting = false;
-	}
+has_all_items = function(craft_item_index = -1) {
+    list_of_items = [];
+    number_of_items_have = 0;
+    
+    var recipe = item_crafting_recepies[craft_item_index];
+    
+    for (var i = 1; i < array_length(recipe); i += 1) {
+        for (var j = 0; j < recipe[i][1]; j += 1) {
+            list_of_items[array_length(list_of_items)] = recipe[i][0];
+        }
+    }
+    
+    // Check if the player has all the items
+    var inventory_index = [];
+    
+    for (var i = 0; i < array_length(list_of_items); i += 1) {
+        for (var j = 0; j < item_inventory_length; j += 1) {
+            if (item_inventory[j] >= 0 && !array_contains(inventory_index, j)) {
+                var item_index = item_inventory[j];
+                
+                // Inline array_contains logic
+                var contains = false;
+                for (var k = 0; k < array_length(inventory_index); k++) {
+                    if (inventory_index[k] == j) {
+                        contains = true;
+                        break;
+                    }
+                }
+
+                if (!contains && item_index == list_of_items[i]) {
+                    inventory_index[array_length(inventory_index)] = j;
+                    number_of_items_have++;
+                }
+            }
+        }
+    }
+    
+    return number_of_items_have == array_length(list_of_items);
 }
+
+craft_item = function(craft_item_index = -1) {
+    // Check if the item is craftable
+    if (has_all_items(craft_item_index)) {
+        var recipe = item_crafting_recepies[craft_item_index];
+        
+        // Remove items from the inventory
+        for (var i = 0; i < array_length(list_of_items); i += 1) {
+            for (var j = 0; j < item_inventory_length; j += 1) {
+                if (item_inventory[j] >= 0 && item_inventory[j] == list_of_items[i]) {
+                    item_inventory[j] = -1;
+                    
+                    // Check the currently in-hand item; if it's in the craft, then destroy it
+                    if (j == item_inventory_selected) {
+                        instance_destroy(item_inventory_active);    
+                    }
+                }
+            }
+        }
+        
+        // Create the crafted item near the player
+        with (instance_nearest(x, y, oPlayer)) {
+            var crafted_item = item_objects[recipe[0][0]];
+            var random_x = irandom(20) - 10;
+            var random_y = irandom(20) - 10;
+            instance_create_layer(x + random_x, y + random_y, 0, crafted_item);
+        }
+        
+        // Close the crafting tab
+        is_crafting = false;
+    }
+}
+
+
 // ---------- NAVIGATION ----------
 
 if (keyboard_check_pressed(vk_enter)) {

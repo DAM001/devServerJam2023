@@ -1,17 +1,15 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "oPlayer",
+  "name": "oEquipIndicator",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":2,"eventType":3,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "player",
-    "path": "folders/Objects/player.yy",
+    "name": "gameplay",
+    "path": "folders/Objects/gameplay.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -30,8 +28,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sPlayerMoveRight",
-    "path": "sprites/sPlayerMoveRight/sPlayerMoveRight.yy",
+    "name": "sEquipIndicator",
+    "path": "sprites/sEquipIndicator/sEquipIndicator.yy",
   },
   "spriteMaskId": null,
   "visible": true,

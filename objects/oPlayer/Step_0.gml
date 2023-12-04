@@ -65,7 +65,7 @@ if (keyboard_check_pressed(ord("F")) or mouse_check_button_pressed(mb_right)) {
 
 if (keyboard_check_pressed(ord("E")) or mouse_check_button_pressed(mb_left)) {
     var nearestItem = noone;
-    var nearestDistance = -1;
+    var nearestDistance = 10000;
     
     with (oItem) {
         var distance = point_distance(x, y, other.x, other.y);

@@ -76,7 +76,7 @@ window.onload = function() {
             containerId: "resources",
             index: 7,
             imagePath: "sString",
-            description: "Description",
+            description: "Long and strong thin item, useful for making ranged weapons",
             resource: ["sBow", "sCrossbow"],
             howToGet: ["Kill enemy mobs"]
         },
@@ -84,7 +84,7 @@ window.onload = function() {
             containerId: "resources",
             index: 8,
             imagePath: "sCoal",
-            description: "Description",
+            description: "Dark material with high flammability",
             resource: ["sTorch", "sCopperBar", "sIronBar", "sMeat"],
             howToGet: ["Mine Rock"]
         },
@@ -132,7 +132,7 @@ window.onload = function() {
             containerId: "tools",
             index: 13,
             imagePath: "sTorch",
-            description: "Description",
+            description: "It provides light for the dark nights. Defensive item, it can scare enemy monsters!",
             stats: [" Durability: 40 (hit)"],
             crafting: [
                 ["sPlayer", "0"],

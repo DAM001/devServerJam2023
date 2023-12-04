@@ -147,4 +147,3 @@ item_crafting_recepies[19] = [[item_copper_sword, 3], [item_copper_bar, 2], [ite
 item_crafting_recepies[20] = [[item_iron_pickaxe, 4], [item_iron_bar, 2], [item_stick, 1]];
 item_crafting_recepies[21] = [[item_iron_ax, 4], [item_iron_bar, 2], [item_stick, 1]];
 item_crafting_recepies[22] = [[item_iron_sword, 4], [item_iron_bar, 2], [item_stick, 1]];
-

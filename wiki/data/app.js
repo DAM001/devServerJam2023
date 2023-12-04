@@ -54,7 +54,7 @@ function createItemBlock(item) {
 
     // Create and append resource element
     if (item.resource) {
-        const resourceElement = createItemElement("div", "item-element", "Resource:");
+        const resourceElement = createItemElement("div", "item-element", "Ingredient for:");
         itemFolder.appendChild(resourceElement);
 
         item.resource.forEach((element, index) => {
