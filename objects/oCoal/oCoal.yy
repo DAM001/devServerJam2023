@@ -1,18 +1,21 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "oItems",
+  "name": "oCoal",
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "player",
-    "path": "folders/Objects/player.yy",
+    "name": "items",
+    "path": "folders/Objects/items.yy",
   },
-  "parentObjectId": null,
-  "persistent": true,
+  "parentObjectId": {
+    "name": "oItem",
+    "path": "objects/oItem/oItem.yy",
+  },
+  "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
   "physicsFriction": 0.2,
@@ -27,7 +30,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "sCoal",
+    "path": "sprites/sCoal/sCoal.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

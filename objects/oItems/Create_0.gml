@@ -35,46 +35,90 @@
 #macro item_iron_sword 33
 
 // Other
-globalvar item_objects;
-item_objects = [];
-item_objects[0] = -1;
-
 globalvar item_sprites; 
 item_sprites = [];
 
-item_sprites[0] = sItem;
-item_sprites[1] = sStick;
-item_sprites[2] = sRock;
-item_sprites[3] = sWood;
-item_sprites[4] = sGrass;
-item_sprites[5] = sRawMeat;
-item_sprites[6] = sMeat;
-item_sprites[7] = sString;
-item_sprites[8] = sCoal;
-item_sprites[9] = sCopperOre;
-item_sprites[10] = sCopperBar;
-item_sprites[11] = sIronOre;
-item_sprites[12] = sIronBar;
-item_sprites[13] = sTorch;
-item_sprites[14] = sCampfire;
-item_sprites[15] = sCraftingTable;
-item_sprites[16] = sFurnace;
-item_sprites[17] = sCopperAnvil;
-item_sprites[18] = sIronAnvil;
-item_sprites[19] = sArrow;
-item_sprites[20] = sBow;
-item_sprites[21] = sCrossbow;
-item_sprites[22] = sWoodPickaxe;
-item_sprites[23] = sStonePickaxe;
-item_sprites[24] = sCopperPickaxe;
-item_sprites[25] = sIronPickaxe;
-item_sprites[26] = sWoodAx;
-item_sprites[27] = sStoneAx;
-item_sprites[28] = sCopperAx;
-item_sprites[29] = sIronAx;
-item_sprites[30] = sWoodSword;
-item_sprites[31] = sStoneSword;
-item_sprites[32] = sCopperSword;
-item_sprites[33] = sIronSword;
+item_sprites[item_none] = sItem;
+item_sprites[item_stick] = sStick;
+item_sprites[item_rock] = sRock;
+item_sprites[item_wood] = sWood;
+item_sprites[item_grass] = sGrass;
+item_sprites[item_raw_meat] = sRawMeat;
+item_sprites[item_meat] = sMeat;
+item_sprites[item_string] = sString;
+item_sprites[item_coal] = sCoal;
+item_sprites[item_copper_ore] = sCopperOre;
+item_sprites[item_copper_bar] = sCopperBar;
+item_sprites[item_iron_ore] = sIronOre;
+item_sprites[item_iron_bar] = sIronBar;
+item_sprites[item_torch] = sTorch;
+item_sprites[item_campfire] = sCampfire;
+item_sprites[item_crafting_table] = sCraftingTable;
+item_sprites[item_furnace] = sFurnace;
+item_sprites[item_copper_anvil] = sCopperAnvil;
+item_sprites[item_iron_anvil] = sIronAnvil;
+item_sprites[item_arrow] = sArrow;
+item_sprites[item_bow] = sBow;
+item_sprites[item_crossbow] = sCrossbow;
+item_sprites[item_wood_pickaxe] = sWoodPickaxe;
+item_sprites[item_stone_pickaxe] = sStonePickaxe;
+item_sprites[item_copper_pickaxe] = sCopperPickaxe;
+item_sprites[item_iron_pickaxe] = sIronPickaxe;
+item_sprites[item_wood_ax] = sWoodAx;
+item_sprites[item_stone_ax] = sStoneAx;
+item_sprites[item_copper_ax] = sCopperAx;
+item_sprites[item_iron_ax] = sIronAx;
+item_sprites[item_wood_sword] = sWoodSword;
+item_sprites[item_stone_sword] = sStoneSword;
+item_sprites[item_copper_sword] = sCopperSword;
+item_sprites[item_iron_sword] = sIronSword;
 
-//alarm[0] = 0.1 * room_speed;
+globalvar item_objects; 
+item_objects = [];
+
+item_objects[item_none] = oItem;
+item_objects[item_stick] = oStick;
+item_objects[item_rock] = oRock;
+item_objects[item_wood] = oWood;
+//item_objects[item_grass] = oGrass;
+//item_objects[item_raw_meat] = oRawMeat;
+//item_objects[item_meat] = oMeat;
+//item_objects[item_string] = oString;
+item_objects[item_coal] = oCoal;
+//item_objects[item_copper_ore] = oCopperOre;
+//item_objects[item_copper_bar] = oCopperBar;
+//item_objects[item_iron_ore] = oIronOre;
+//item_objects[item_iron_bar] = oIronBar;
+item_objects[item_torch] = oTorch;
+//item_objects[item_campfire] = oCampfire;
+//item_objects[item_crafting_table] = oCraftingTable;
+//item_objects[item_furnace] = oFurnace;
+//item_objects[item_copper_anvil] = oCopperAnvil;
+//item_objects[item_iron_anvil] = oIronAnvil;
+//item_objects[item_arrow] = oArrow;
+//item_objects[item_bow] = oBow;
+//item_objects[item_crossbow] = oCrossbow;
+//item_objects[item_wood_pickaxe] = oWoodPickaxe;
+//item_objects[item_stone_pickaxe] = oStonePickaxe;
+//item_objects[item_copper_pickaxe] = oCopperPickaxe;
+//item_objects[item_iron_pickaxe] = oIronPickaxe;
+item_objects[item_wood_ax] = oWoodAx;
+//item_objects[item_stone_ax] = oStoneAx;
+//item_objects[item_copper_ax] = oCopperAx;
+//item_objects[item_iron_ax] = oIronAx;
+//item_objects[item_wood_sword] = oWoodSword;
+//item_objects[item_stone_sword] = oStoneSword;
+//item_objects[item_copper_sword] = oCopperSword;
+//item_objects[item_iron_sword] = oIronSword;
+
+
+// CRAFTING RECEPIES
+// Example:  [[result, 0], [item_1, 1], [item_2, 1]]
+// [result, crafting level], [resource_1, quantity], [resource_2, quantity]...
+globalvar item_crafting_recepies;
+item_crafting_recepies = [];
+
+item_crafting_recepies[0] = [[item_crafting_table, 0], [item_wood, 4]];
+item_crafting_recepies[1] = [[item_torch, 0], [item_stick, 1], [item_coal, 1]];
+item_crafting_recepies[2] = [[item_furnace, 1], [item_rock, 4]];
+

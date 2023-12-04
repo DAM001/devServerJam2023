@@ -49,7 +49,7 @@
   "origin": 0,
   "parent": {
     "name": "inventory",
-    "path": "folders/Sprites/gameplay/inventory.yy",
+    "path": "folders/Sprites/gameplay/ui/inventory.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

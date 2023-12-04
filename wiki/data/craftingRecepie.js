@@ -1,20 +1,25 @@
 class CraftingRecipe extends HTMLElement {
     connectedCallback() {
         const result = this.getAttribute('result');
+        const index = this.getAttribute('index');
 
         // Create the result item element with the "block-list-first" class
         const resultItem = document.createElement('item-link');
         resultItem.setAttribute('imageSource', result);
         resultItem.classList.add('block-list-first');
 
+        // Create the index display element
+        if (index) {
+            const indexElement = document.createElement('span');
+            indexElement.textContent = `${index} | `;
+            resultItem.appendChild(indexElement);
+        }
+
+        this.appendChild(resultItem);
+
         // Create a div for all items
         const itemsDiv = document.createElement('div');
         itemsDiv.className = 'block-list-items';
-
-        // Append the result item element to the custom element
-        this.appendChild(resultItem);
-
-        // Append the items div to the custom element
         this.appendChild(itemsDiv);
 
         // Create and append item elements based on attributes
