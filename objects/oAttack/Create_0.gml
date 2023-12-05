@@ -1,4 +1,4 @@
-distance_from_player = 34;
+distance_from_player = 24;
 
 // variables set from code
 attack_direction = 0;

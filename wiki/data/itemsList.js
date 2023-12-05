@@ -14,14 +14,14 @@
 
 window.onload = function() {
     const items = [{
-            containerId: "resources",
+            containerId: "materials",
             index: 0,
             imagePath: "sItem",
             description: "A placeholder item for development only, this should not appear in the game",
             howToGet: "You cant get this item"
         },
         {
-            containerId: "resources",
+            containerId: "materials",
             index: 1,
             imagePath: "sStick",
             description: "A crafting resource, used for most of the tools",
@@ -35,10 +35,10 @@ window.onload = function() {
             description: "The basic starter tool! And a crafting resource, mainly used for the stone tools.",
             stats: [" Durability: unbreakable", " Cooldown: 1.0 (sec)", " Enemy damage: 1.0 (dmg)", " Mining damage: 0.5 (dmg)", " Tree damage: 1.0 (dmg)"],
             resource: ["sStonePickaxe", "sStoneAx", "sStoneSword", "sFurnace", "sArrow"],
-            howToGet: "Spawns randomly on the ground; Stone with ores drops when mined (100% chance)"
+            howToGet: "Spawns randomly on the ground; Stone with ores drops when mined (75% chance)"
         },
         {
-            containerId: "resources",
+            containerId: "materials",
             index: 3,
             imagePath: "sWood",
             description: "A crafting resource, gained from trees",
@@ -74,7 +74,7 @@ window.onload = function() {
             ]
         },
         {
-            containerId: "resources",
+            containerId: "materials",
             index: 7,
             imagePath: "sString",
             description: "Long and strong thin item, useful for making ranged weapons",
@@ -82,7 +82,7 @@ window.onload = function() {
             howToGet: ["Kill enemy mobs"]
         },
         {
-            containerId: "resources",
+            containerId: "materials",
             index: 8,
             imagePath: "sCoal",
             description: "Dark material with high flammability",
@@ -90,7 +90,7 @@ window.onload = function() {
             howToGet: ["Mine Rock"]
         },
         {
-            containerId: "resources",
+            containerId: "materials",
             index: 9,
             imagePath: "sCopperOre",
             description: "Description",
@@ -98,7 +98,7 @@ window.onload = function() {
             howToGet: ["Mine Stone with a Stone Pickaxe or better"]
         },
         {
-            containerId: "resources",
+            containerId: "materials",
             index: 10,
             imagePath: "sCopperBar",
             description: "Description",
@@ -110,7 +110,7 @@ window.onload = function() {
             ]
         },
         {
-            containerId: "resources",
+            containerId: "materials",
             index: 11,
             imagePath: "sIronOre",
             description: "Description",
@@ -118,7 +118,7 @@ window.onload = function() {
             howToGet: ["Mine Stone with a Copper Pickaxe or better"]
         },
         {
-            containerId: "resources",
+            containerId: "materials",
             index: 12,
             imagePath: "sIronBar",
             description: "Description",
@@ -166,7 +166,7 @@ window.onload = function() {
             containerId: "Furnace",
             index: 16,
             imagePath: "sFurnace",
-            description: "Crafting station for resources witch require heat",
+            description: "Crafting station for materials witch require heat",
             crafting: [
                 ["sCraftingTable", "1"],
                 ["sRock", "4"]
@@ -193,7 +193,7 @@ window.onload = function() {
             ]
         },
         {
-            containerId: "resources",
+            containerId: "materials",
             index: 19,
             imagePath: "sArrow",
             description: "Ammunition for range weapons (Bow, Crossbow)",

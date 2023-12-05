@@ -1,5 +1,6 @@
 tree_max_health = 10;
 tree_health = tree_max_health;
+tree_multiply_time = 10;
 
 damage = function(damage_amount = 0) {	
     tree_health -= damage_amount;
@@ -24,6 +25,7 @@ tree_destroy = function() {
 		instance_create_layer(x + random_x, y + random_y, 0, oStick);
     }
 	
+	var effect = effect_create_above(ef_ring, x, y, 0.01, c_white);
 	
 	//destroy related objects
 	instance_destroy(health_bar);
@@ -39,3 +41,7 @@ alarm[0] = 0.05 * room_speed;
 var tree_scale = 2 + irandom(10) / 10;
 image_xscale = 2;
 image_yscale = 2;
+
+
+// Spawn trees
+alarm[1] = (irandom(tree_multiply_time) + (tree_multiply_time / 2)) * room_speed;

@@ -15,18 +15,16 @@ damage = function(damage_amount = 0) {
 		rock_destroy();
 	}
 	
-	effect_create_above(ef_spark, x, y, 20, c_white);
+	var effect = effect_create_above(ef_spark, x, y, 1, c_white);
 }
 
 rock_destroy = function() {
-	//create wood resource when destroyed
-	create_object(oRock);
-	
-	/*if (irandom(1) == 1) {
+	//create rock resource when destroyed
+	if (irandom(3) < 3) {
 		instance_create_layer(x, y, 0, oRock);
-	}*/
+	}
 	
-	// spawn ores
+	// spawn ores based on type
 	if (rock_type == 0) {
 		create_object(oCoal);
 	} else if (rock_type == 1) {
@@ -35,13 +33,7 @@ rock_destroy = function() {
 		create_object(oIronOre);
 	}
 	
-	/*var number_of_sticks = irandom(1);
-	for (var i = 0; i < number_of_sticks; ++i;) {
-		var random_x = irandom(20) - 10;
-		var random_y = irandom(20) - 10;
-		instance_create_layer(x + random_x, y + random_y, 0, oStick);
-    }*/
-	
+	var effect = effect_create_above(ef_ring, x, y, 0.01, c_white);
 	
 	//destroy related objects
 	instance_destroy(health_bar);
@@ -65,3 +57,4 @@ image_xscale = 2;
 image_yscale = 2;
 image_speed = 0;
 image_index = rock_type;
+depth = -y;
