@@ -72,10 +72,14 @@ item-link {
 }
 
 .header-subtitle {
-    color: var(--color-grey);
-    padding-top: 5px;
+    padding: 10px;
+    color: var(--color-light);
     font-size: 22px;
     font-weight: 700;
+}
+
+.header-title {
+    width: 100%;
 }
 
 .content {

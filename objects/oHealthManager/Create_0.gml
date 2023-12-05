@@ -1,0 +1,2 @@
+globalvar player_max_health;
+globalvar player_current_health;
