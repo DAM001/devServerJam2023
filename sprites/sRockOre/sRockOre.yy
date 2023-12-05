@@ -15,7 +15,7 @@
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"326605a5-d45a-4e0f-9c58-516ce9a6fff6",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c31693ec-c405-4dd4-be0b-c9c6ef1fbd4d",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"cd834b28-ffad-4c49-a7c5-c058c530f184",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4613403a-58e6-4837-83b1-b587672a387c",},
   ],
   "gridX": 0,
   "gridY": 0,
@@ -58,7 +58,7 @@
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"326605a5-d45a-4e0f-9c58-516ce9a6fff6","path":"sprites/sRockOre/sRockOre.yy",},},},"Disabled":false,"id":"8af5e8d6-2bcf-4c57-86d4-227592fcfe4f","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"c31693ec-c405-4dd4-be0b-c9c6ef1fbd4d","path":"sprites/sRockOre/sRockOre.yy",},},},"Disabled":false,"id":"cba44751-cb1c-4a65-8fb1-112d9abdb90d","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"cd834b28-ffad-4c49-a7c5-c058c530f184","path":"sprites/sRockOre/sRockOre.yy",},},},"Disabled":false,"id":"f91bcebd-bccc-4049-9f82-675a9eed3e3c","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"4613403a-58e6-4837-83b1-b587672a387c","path":"sprites/sRockOre/sRockOre.yy",},},},"Disabled":false,"id":"aa8ac428-8d7f-466c-a91b-7f6257635339","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

@@ -1,3 +1,8 @@
+randomize();
+rock_type = 0;
+rock_type += irandom(2);
+
+// health
 rock_max_health = 20;
 rock_health = rock_max_health;
 
@@ -15,7 +20,20 @@ damage = function(damage_amount = 0) {
 
 rock_destroy = function() {
 	//create wood resource when destroyed
-	instance_create_layer(x, y, 0, oRock);
+	create_object(oRock);
+	
+	/*if (irandom(1) == 1) {
+		instance_create_layer(x, y, 0, oRock);
+	}*/
+	
+	// spawn ores
+	if (rock_type == 0) {
+		create_object(oCoal);
+	} else if (rock_type == 1) {
+		create_object(oCopperOre);
+	} else if (rock_type == 2) {
+		create_object(oIronOre);
+	}
 	
 	/*var number_of_sticks = irandom(1);
 	for (var i = 0; i < number_of_sticks; ++i;) {
@@ -30,6 +48,12 @@ rock_destroy = function() {
 	instance_destroy(self);
 }
 
+create_object = function(resource_object = noone) {
+	var random_x = x + irandom(20) - 10;
+	var random_y = y + irandom(20) - 10;
+	instance_create_layer(random_x, random_y, 0, resource_object);
+}
+
 // create healthbar
 health_bar = instance_create_layer(x, y, 0, oHealthBar);
 
@@ -40,4 +64,4 @@ var tree_scale = 2 + irandom(10) / 10;
 image_xscale = 2;
 image_yscale = 2;
 image_speed = 0;
-image_index = 0;
+image_index = rock_type;

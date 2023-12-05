@@ -10,6 +10,7 @@
     {"name":"base","order":6,"path":"folders/Objects/items/base.yy",},
     {"name":"effects","order":7,"path":"folders/Objects/items/effects.yy",},
     {"name":"map","order":5,"path":"folders/Objects/map.yy",},
+    {"name":"base","order":3,"path":"folders/Objects/map/base.yy",},
     {"name":"player","order":6,"path":"folders/Objects/player.yy",},
     {"name":"Particle Systems","order":15,"path":"folders/Particle Systems.yy",},
     {"name":"Paths","order":4,"path":"folders/Paths.yy",},
@@ -28,7 +29,7 @@
     {"name":"player","order":9,"path":"folders/Sprites/player.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
-    {"name":"base","order":3,"path":"folders/Objects/map/base.yy",},
+    {"name":"enemy","order":13,"path":"folders/Sprites/enemy.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"oBow","order":25,"path":"objects/oBow/oBow.yy",},

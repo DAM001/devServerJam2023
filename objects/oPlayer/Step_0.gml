@@ -1,5 +1,5 @@
 // --------- MOVEMENT ---------
-var collide_objects = [oWall, oTree];
+var collide_objects = [oWall, oTree, oRockOre];
 
 //input for the movement
 var _right = keyboard_check(ord("D"));

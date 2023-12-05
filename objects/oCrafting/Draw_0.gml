@@ -161,17 +161,17 @@ craft_item = function(craft_item_index = -1) {
 
 // ---------- NAVIGATION ----------
 
-if (keyboard_check_pressed(vk_enter)) {
+if (keyboard_check_pressed(vk_enter) || mouse_check_button_pressed(mb_left)) {
 	craft_item(cursor_position + starter_crafting_index);
 }
 
-if (keyboard_check_pressed(vk_down)) {
+if (keyboard_check_pressed(vk_down) || mouse_wheel_down()) {
 	if (cursor_position < number_of_items - 1) {
 		cursor_position++;
 	}
 }
 
-if (keyboard_check_pressed(vk_up)) {
+if (keyboard_check_pressed(vk_up) || mouse_wheel_up()) {
 	if (cursor_position > 0) {
 		cursor_position--;
 	}
