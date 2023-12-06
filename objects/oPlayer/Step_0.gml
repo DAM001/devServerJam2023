@@ -55,6 +55,14 @@ if (_xinput == 0 && _yinput == 0)
 }
 
 // --------- ITEM HANDLING ---------
+// USE ITEM
+if (keyboard_check_pressed(vk_space) or mouse_check_button_pressed(mb_left)) {
+	if (item_inventory[item_inventory_selected] >= 0) {
+		item_inventory_active.item_use();
+	}
+}
+
+// THROW ITEM
 if (!is_crafting && (keyboard_check_pressed(ord("Q")) 
 || keyboard_check_pressed(vk_down) || mouse_check_button_pressed(mb_right))) {
 	if (item_inventory[item_inventory_selected] >= 0) {
@@ -64,6 +72,7 @@ if (!is_crafting && (keyboard_check_pressed(ord("Q"))
 	}
 }
 
+// EQUIP ITEM
 if (!is_crafting && (keyboard_check_pressed(ord("E")) || keyboard_check_pressed(vk_up) 
 || mouse_check_button_pressed(mb_left))) {
     var nearestItem = noone;
@@ -90,8 +99,7 @@ if (!is_crafting && (keyboard_check_pressed(ord("E")) || keyboard_check_pressed(
 
 // Change active inventory slot
 
-change_active_inventory = function (active_index)
-{
+change_active_inventory = function (active_index) {
 	item_inventory_selected = active_index;
 	
 	if (item_inventory[active_index] >= 0) {
@@ -109,12 +117,14 @@ change_active_inventory = function (active_index)
 	}
 }
 
+// INVENTORY SLOT CHANGE ALPHA KEYS
 for (var i = 0; i < item_inventory_length; i += 1) {
 	if (!is_crafting && (keyboard_check_pressed(ord(i + 1)))) {
 		change_active_inventory(i);
 	}
 }
 
+// INVENTORY SLOT CHANGE UP MOUSE WHEEL AND ARROW KEY
 if (!is_crafting && (mouse_wheel_up() || keyboard_check_pressed(vk_right))) {
     item_inventory_selected++;
 	if (item_inventory_selected >= item_inventory_length - 1) {
@@ -124,6 +134,7 @@ if (!is_crafting && (mouse_wheel_up() || keyboard_check_pressed(vk_right))) {
 	change_active_inventory(item_inventory_selected);
 }
 
+// INVENTORY SLOT CHANGE DOWN MOUSE WHEEL AND ARROW KEY
 if (!is_crafting && (mouse_wheel_down() || keyboard_check_pressed(vk_left))) {
     item_inventory_selected--;
 	if (item_inventory_selected < 0) {

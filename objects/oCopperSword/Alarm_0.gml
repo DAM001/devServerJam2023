@@ -3,6 +3,7 @@ item_index = item_copper_sword;
 
 usable = true;
 durability = 50;
+current_durability = durability;
 attack_cooloff = 6; // 1 is 100ms
 
 attack_tree_damage = 4;

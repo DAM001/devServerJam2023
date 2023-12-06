@@ -1,3 +1,5 @@
+/// @description Spawn rocks
+
 randomize();
 var position_x = x + (irandom(2) - 1) * 32;
 var position_y = y + (irandom(2) - 1) * 32;

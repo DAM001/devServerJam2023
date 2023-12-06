@@ -1,6 +1,6 @@
 tree_max_health = 10;
 tree_health = tree_max_health;
-tree_multiply_time = 10;
+tree_multiply_time = 30;
 
 damage = function(damage_amount = 0) {	
     tree_health -= damage_amount;
@@ -45,3 +45,4 @@ image_yscale = 2;
 
 // Spawn trees
 alarm[1] = (irandom(tree_multiply_time) + (tree_multiply_time / 2)) * room_speed;
+//alarm[1] = 1 * room_speed;

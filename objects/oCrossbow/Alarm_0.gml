@@ -3,6 +3,7 @@ item_index = item_crossbow;
 
 usable = true;
 durability = 60;
+current_durability = durability;
 attack_cooloff = 10; // 1 is 100ms
 
 attack_tree_damage = 1;

@@ -12,7 +12,14 @@ item_inventory_selected = 0;
 item_inventory = [item_inventory_length];
 item_inventory_items = [item_inventory_length];
 
+item_inventory_durability_bar = [item_inventory_length];
+
 for (var i = 0; i < item_inventory_length; i += 1)
 {
 	item_inventory[i] = -1;
+	item_inventory_durability_bar[i] = instance_create_layer(0, 0, 0, oHealthBar);
+	item_inventory_durability_bar[i].depth = -10000001;
 }
+
+// visuals
+depth = -10000000;
