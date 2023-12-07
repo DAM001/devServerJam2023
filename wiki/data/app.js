@@ -1,3 +1,23 @@
+window.onload = function() {
+    fetch('data/json/items.json')
+        .then(response => response.json())
+        .then(data => {
+            const items = data.items;
+            items.forEach(item => createItemBlock(item));
+        })
+        .catch(error => console.error('Error fetching JSON:', error));
+
+    fetch("data/json/crafting.json")
+        .then(response => response.json())
+        .then(data => {
+            data.craftingStations.forEach(station => {
+                createCraftingRecipes(station);
+            });
+        })
+        .catch(error => console.error('Error fetching JSON:', error));
+};
+
+// generate items
 function createItemBlock(item) {
     const name = convertImageToName(item.imagePath);
     item.imagePath = convertImagePath(item.imagePath);
@@ -126,19 +146,6 @@ function toggleContent() {
 }
 
 //create the craftable list
-document.addEventListener("DOMContentLoaded", function() {
-    // Fetch the JSON file
-    fetch("data/crafting.json")
-        .then(response => response.json())
-        .then(data => {
-            // Process crafting stations
-            data.craftingStations.forEach(station => {
-                createCraftingRecipes(station);
-            });
-        })
-        .catch(error => console.error('Error fetching JSON:', error));
-});
-
 function createCraftingRecipes(station) {
     // Find the crafting station div based on its name
     const stationUl = document.getElementById(station.name);
