@@ -1,0 +1,51 @@
+{
+    "craftingStations": [{
+            "name": "player-hand",
+            "recipes": [
+                { "index": 0, "result": "sCraftingTable", "items": { "sWood": 4 } },
+                { "index": 1, "result": "sTorch", "items": { "sStick": 1, "sCoal": 1 } }
+            ]
+        },
+        {
+            "name": "crafting-table",
+            "recipes": [
+                { "index": 2, "result": "sFurnace", "items": { "sRock": 4 } },
+                { "index": 3, "result": "sCopperAnvil", "items": { "sCopperBar": 4 } },
+                { "index": 4, "result": "sIronAnvil", "items": { "sIronBar": 4 } },
+                { "index": 5, "result": "sArrow", "items": { "sRock": 1, "sStick": 1 } },
+                { "index": 6, "result": "sBow", "items": { "sWood": 1, "sStick": 2, "sString": 1 } },
+                { "index": 7, "result": "sCrossbow", "items": { "sCopperBar": 1, "sStick": 2, "sString": 1 } },
+                { "index": 8, "result": "sWoodPickaxe", "items": { "sWood": 2, "sStick": 1 } },
+                { "index": 9, "result": "sStonePickaxe", "items": { "sRock": 2, "sStick": 1 } },
+                { "index": 10, "result": "sWoodAx", "items": { "sWood": 2, "sStick": 1 } },
+                { "index": 11, "result": "sStoneAx", "items": { "sRock": 2, "sStick": 1 } },
+                { "index": 12, "result": "sWoodSword", "items": { "sWood": 2, "sStick": 1 } },
+                { "index": 13, "result": "sStoneSword", "items": { "sRock": 2, "sStick": 1 } }
+            ]
+        },
+        {
+            "name": "furnace",
+            "recipes": [
+                { "index": 14, "result": "sMeat", "items": { "sRawMeat": 1, "sCoal": 1 } },
+                { "index": 15, "result": "sCopperBar", "items": { "sCopperOre": 1, "sCoal": 1 } },
+                { "index": 16, "result": "sIronBar", "items": { "sIronOre": 1, "sCoal": 1 } }
+            ]
+        },
+        {
+            "name": "copper-anvil",
+            "recipes": [
+                { "index": 17, "result": "sCopperPickaxe", "items": { "sCopperBar": 2, "sStick": 1 } },
+                { "index": 18, "result": "sCopperAx", "items": { "sCopperBar": 2, "sStick": 1 } },
+                { "index": 19, "result": "sCopperSword", "items": { "sCopperBar": 2, "sStick": 1 } }
+            ]
+        },
+        {
+            "name": "iron-anvil",
+            "recipes": [
+                { "index": 20, "result": "sIronPickaxe", "items": { "sIronBar": 2, "sStick": 1 } },
+                { "index": 21, "result": "sIronAx", "items": { "sIronBar": 2, "sStick": 1 } },
+                { "index": 22, "result": "sIronSword", "items": { "sIronBar": 2, "sStick": 1 } }
+            ]
+        }
+    ]
+}

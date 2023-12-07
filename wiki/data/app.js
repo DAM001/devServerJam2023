@@ -124,3 +124,44 @@ function toggleContent() {
     const contentTable = document.getElementById("table-of-content");
     contentTable.style.display = isContentVisible ? "block" : "none";
 }
+
+//create the craftable list
+document.addEventListener("DOMContentLoaded", function() {
+    // Fetch the JSON file
+    fetch("data/crafting.json")
+        .then(response => response.json())
+        .then(data => {
+            // Process crafting stations
+            data.craftingStations.forEach(station => {
+                createCraftingRecipes(station);
+            });
+        })
+        .catch(error => console.error('Error fetching JSON:', error));
+});
+
+function createCraftingRecipes(station) {
+    // Find the crafting station div based on its name
+    const stationUl = document.getElementById(station.name);
+
+    // Create recipes for the crafting station
+    station.recipes.forEach(recipe => {
+        const recipeItem = document.createElement("li");
+
+        // Create crafting-recipe element
+        const craftingRecipeElement = document.createElement("crafting-recipe");
+        craftingRecipeElement.setAttribute("index", recipe.index);
+        craftingRecipeElement.setAttribute("result", recipe.result);
+
+        // Add items to the crafting-recipe element
+        Object.entries(recipe.items).forEach(([item, quantity], index) => {
+            craftingRecipeElement.setAttribute(`item${index}`, item);
+            craftingRecipeElement.setAttribute(`item${index}-quantity`, quantity);
+        });
+
+        // Append the crafting-recipe element to the li
+        recipeItem.appendChild(craftingRecipeElement);
+
+        // Append the li to the crafting station ul
+        stationUl.appendChild(recipeItem);
+    });
+}

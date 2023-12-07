@@ -1,17 +1,3 @@
-/* EXAMPLE ITEM
-
-{
-    containerId: "folderId",
-    index: 0,
-    imagePath: "sItem",
-    description: "Description",
-    resource: ["sItem", "sItem"],
-    stats: ["Property: 0", "Property: 1"],
-    howToGet: "Random happening",
-    crafting: ["sFurnace", ["sCoal", "1"], ["sMeat", 1]]
-},
-*/
-
 window.onload = function() {
     const items = [{
             containerId: "materials",
