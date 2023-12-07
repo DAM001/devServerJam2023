@@ -1,2 +1,2 @@
 /// @description Item setup
-item_index = item_none;
+item_index = item_arrow;

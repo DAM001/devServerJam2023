@@ -1,10 +1,11 @@
 /// @description Item setup
-item_index = item_none;
+item_index = item_bow;
 
 usable = true;
 durability = 40;
 current_durability = durability;
-attack_cooloff = 7; // 1 is 100ms
+attack_cooloff = 10; // 1 is 100ms
+shoot_distance = 70 * 3;
 
 attack_tree_damage = 1;
 attack_mining_damage = 1;

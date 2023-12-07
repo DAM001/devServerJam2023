@@ -43,6 +43,7 @@ item_unequip = function() {
 	
 	x += irandom(20) - 10;
 	y += irandom(20) - 10;
+	image_xscale = 2;
 }
 
 item_hide = function() {
@@ -76,4 +77,8 @@ item_use = function() {
 		
 		alarm[1] = .1 * room_speed;
 	}
+}
+
+item_use_up = function() {
+	// code here
 }

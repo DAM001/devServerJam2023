@@ -44,6 +44,7 @@
             "recipes": [
                 { "index": 20, "result": "sIronPickaxe", "items": { "sIronBar": 2, "sStick": 1 } },
                 { "index": 21, "result": "sIronAx", "items": { "sIronBar": 2, "sStick": 1 } },
+                { "index": 22, "result": "sIronSword", "items": { "sIronBar": 2, "sStick": 1 } },
                 { "index": 22, "result": "sIronSword", "items": { "sIronBar": 2, "sStick": 1 } }
             ]
         }

@@ -55,10 +55,17 @@ if (_xinput == 0 && _yinput == 0)
 }
 
 // --------- ITEM HANDLING ---------
-// USE ITEM
+// USE ITEM (BUTTON DOWN)
 if (keyboard_check_pressed(vk_space) or mouse_check_button_pressed(mb_left)) {
 	if (item_inventory[item_inventory_selected] >= 0) {
 		item_inventory_active.item_use();
+	}
+}
+
+// USE ITEM (BUTTON UP)
+if (mouse_check_button_released(vk_space) or mouse_check_button_released(mb_left)) {
+	if (item_inventory[item_inventory_selected] >= 0) {
+		item_inventory_active.item_use_up();
 	}
 }
 
@@ -98,7 +105,6 @@ if (!is_crafting && (keyboard_check_pressed(ord("E")) || keyboard_check_pressed(
 }
 
 // Change active inventory slot
-
 change_active_inventory = function (active_index) {
 	item_inventory_selected = active_index;
 	
