@@ -32,11 +32,6 @@ item_use = function() {
 		is_attack_charging = true;
 		current_durability--;
 		
-		// TODO: destroy item if durability is zero
-		/*if (current_durability <= 0) {
-			instance_destroy(self);
-		}*/
-		
 		alarm[1] = .1 * room_speed;
 	}
 }
@@ -55,6 +50,13 @@ item_use_up = function() {
 		
 		attack_cooloff_bar.set_health(attack_cooloff_current, attack_cooloff);
 	}
+	
+	if (current_durability <= 0) {
+		item_inventory[item_inventory_selected] = -1;
+		item_inventory_items[item_inventory_selected] = noone;
+		item_inventory_active = noone;
+		instance_destroy(self);
+	}
 }
 
 shoot_arrow = function(arrow_speed) {
@@ -64,6 +66,8 @@ shoot_arrow = function(arrow_speed) {
     if (instance_exists(player)) {
         arrow.arrow_shoot(player.my_facing, arrow_speed, shoot_distance / attack_cooloff * arrow_speed);
     }
+
+	audio_play_sound(bow, 1, false, .3);
 }
 
 check_arrow = function() {

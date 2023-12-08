@@ -6,3 +6,4 @@ near_item = noone;
 near_item_distance = 1000;
 
 pickup_indicator = instance_nearest(x, y, oEquipIndicator);
+play_step_audio = true;

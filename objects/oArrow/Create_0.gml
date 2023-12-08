@@ -14,6 +14,8 @@ arrow_start_position_y = y;
 item_equip = function() {
 	equipped = true;
 	image_angle = 0;
+	
+	audio_play_sound(pop, 1, false, .5);
 }
 
 arrow_shoot = function(heading = 0, move_speed = 0, move_distance = 0) {

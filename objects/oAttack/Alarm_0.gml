@@ -37,8 +37,20 @@ damage_object = function(damage_object_type = oTree, damage_amount = 0) {
 
 // Do damage to trees
 var is_object_damaged = damage_object(oTree, attack_tree_damage);
-if (!is_object_damaged) {
+if (is_object_damaged) {
+	var sounds = [wood1, wood2, wood3, wood4];
+	audio_play_sound(sounds[irandom(3)], 1, false, .3);
+} else {
 	is_object_damaged = damage_object(oRockOre, attack_mining_damage);
+}
+if (is_object_damaged) {
+	var sounds = [stone154, stone255, stone356, stone457];
+	audio_play_sound(sounds[irandom(3)], 1, false, .3);
+}
+
+if (!is_object_damaged) {
+	var sounds = [sweep1, sweep2, sweep3, sweep4, sweep5, sweep6, sweep7];
+	audio_play_sound(sounds[irandom(6)], 1, false, .3);
 }
 
 /*if (is_object_damaged == false) {

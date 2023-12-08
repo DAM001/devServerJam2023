@@ -34,6 +34,8 @@ hide_attack_cooloff = function() {
 
 item_equip = function() {
 	equipped = true;
+	
+	audio_play_sound(pop, 1, false, .5);
 }
 
 item_unequip = function() {
@@ -70,15 +72,15 @@ item_use = function() {
 		
 		current_durability--;
 		
-		// TODO: destroy item if durability is zero
-		/*if (current_durability <= 0) {
-			instance_destroy(self);
-		}*/
-		
 		alarm[1] = .1 * room_speed;
 	}
 }
 
 item_use_up = function() {
-	// code here
+	if (current_durability <= 0) {
+		item_inventory[item_inventory_selected] = -1;
+		item_inventory_items[item_inventory_selected] = noone;
+		item_inventory_active = noone;
+		instance_destroy(self);
+	}
 }

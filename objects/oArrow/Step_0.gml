@@ -19,6 +19,15 @@ if (arrow_is_shooted) {
 	if (arrow_distance < distance) {
 		arrow_is_shooted = false;
 	}
+	
+	// check collision
+	var object_at_position = instance_position(x, y, [oTree, oRockOre, oPlayer, oWall]);
+	if (object_at_position != noone) {
+		arrow_is_shooted = false;
+		
+		var sounds = [bowhit1, bowhit2, bowhit3, bowhit4];
+		audio_play_sound(sounds[irandom(3)], 1, false, .3);
+	}
 } else {
 	event_inherited();
 }

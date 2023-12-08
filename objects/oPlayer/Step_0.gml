@@ -24,6 +24,11 @@ if (_magnitude > 0) {
 
 move_and_collide(_xinput * my_speed * my_speed_modifier, _yinput * my_speed * my_speed_modifier, collide_objects);
 
+// play step sound
+if (play_step_audio && (_xinput != 0 || _yinput != 0)) {
+	play_step_audio = false;
+	alarm[0] = 0.3 * room_speed;
+}
 
 // movement anim
 if (_xinput > 0) {
