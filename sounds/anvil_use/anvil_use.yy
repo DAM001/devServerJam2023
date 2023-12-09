@@ -12,8 +12,8 @@
   "conversionMode": 0,
   "duration": 1.250023,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "anvil",
+    "path": "folders/Sounds/items/anvil.yy",
   },
   "preload": false,
   "sampleRate": 44100,

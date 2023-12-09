@@ -13,7 +13,7 @@
   "duration": 0.844812,
   "parent": {
     "name": "quick_charge",
-    "path": "folders/Sounds/player/crossbow/quick_charge.yy",
+    "path": "folders/Sounds/items/crossbow/quick_charge.yy",
   },
   "preload": false,
   "sampleRate": 44100,

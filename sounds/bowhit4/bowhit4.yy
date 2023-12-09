@@ -13,7 +13,7 @@
   "duration": 1.0,
   "parent": {
     "name": "bow",
-    "path": "folders/Sounds/bow.yy",
+    "path": "folders/Sounds/items/bow.yy",
   },
   "preload": false,
   "sampleRate": 44100,

@@ -13,7 +13,7 @@
   "duration": 0.278027,
   "parent": {
     "name": "eat",
-    "path": "folders/Sounds/eat.yy",
+    "path": "folders/Sounds/player/eat.yy",
   },
   "preload": false,
   "sampleRate": 44100,

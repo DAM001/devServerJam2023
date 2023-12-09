@@ -13,7 +13,7 @@
   "duration": 1.027083,
   "parent": {
     "name": "crossbow",
-    "path": "folders/Sounds/player/crossbow.yy",
+    "path": "folders/Sounds/items/crossbow.yy",
   },
   "preload": false,
   "sampleRate": 44100,

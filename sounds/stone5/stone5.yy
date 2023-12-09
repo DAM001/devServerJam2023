@@ -13,7 +13,7 @@
   "duration": 0.562517,
   "parent": {
     "name": "footstep",
-    "path": "folders/Sounds/footstep.yy",
+    "path": "folders/Sounds/player/footstep.yy",
   },
   "preload": false,
   "sampleRate": 44100,
