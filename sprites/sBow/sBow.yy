@@ -28,8 +28,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "items",
-    "path": "folders/Sprites/items.yy",
+    "name": "tools",
+    "path": "folders/Sprites/items/tools.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

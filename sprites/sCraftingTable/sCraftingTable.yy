@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "items",
-    "path": "folders/Sprites/items.yy",
+    "name": "craftingStations",
+    "path": "folders/Sprites/items/craftingStations.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

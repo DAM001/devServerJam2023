@@ -2,9 +2,9 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "sSapphire",
-  "bbox_bottom": 0,
+  "bbox_bottom": 7,
   "bbox_left": 0,
-  "bbox_right": 0,
+  "bbox_right": 7,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "items",
-    "path": "folders/Sprites/items.yy",
+    "name": "gems",
+    "path": "folders/Sprites/items/gems.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
