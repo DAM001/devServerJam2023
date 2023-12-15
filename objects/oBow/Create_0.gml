@@ -65,7 +65,8 @@ shoot_arrow = function(arrow_speed) {
     var player = instance_nearest(x, y, oPlayer);
     if (instance_exists(player)) {
         arrow.arrow_shoot(player.my_facing, arrow_speed, shoot_distance / attack_cooloff * arrow_speed);
-    }
+		arrow.arrow_damage = attack_enemy_damage;
+	}
 
 	audio_play_sound(bow, 1, false, .3);
 }

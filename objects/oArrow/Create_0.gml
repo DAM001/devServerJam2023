@@ -7,6 +7,7 @@ arrow_speed = 0;
 arrow_distance = 0;
 arrow_is_shooted = false;
 arrow_heading = 0;
+arrow_damage = 0;
 
 arrow_start_position_x = x;
 arrow_start_position_y = y;

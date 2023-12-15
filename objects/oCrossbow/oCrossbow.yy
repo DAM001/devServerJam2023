@@ -4,6 +4,7 @@
   "name": "oCrossbow",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
@@ -12,8 +13,8 @@
     "path": "folders/Objects/items.yy",
   },
   "parentObjectId": {
-    "name": "oItem",
-    "path": "objects/oItem/oItem.yy",
+    "name": "oBow",
+    "path": "objects/oBow/oBow.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,

@@ -21,7 +21,12 @@ if (arrow_is_shooted) {
 	}
 	
 	// check collision
-	var object_at_position = instance_position(x, y, [oTree, oRockOre, oPlayer, oWall]);
+	var damageable_at_position = instance_position(x, y, [oEnemy]);	
+	if (damageable_at_position != noone) {
+		damageable_at_position.damage(arrow_damage * (arrow_speed / 10));
+	}
+	
+	var object_at_position = instance_position(x, y, [oTree, oRockOre, oPlayer, oWall, oEnemy]);
 	if (object_at_position != noone) {
 		arrow_is_shooted = false;
 		
