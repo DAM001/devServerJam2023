@@ -1,7 +1,7 @@
 var inventory_width = 12 + (item_inventory_length * 16) * 2;
 
-var position_x = camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]) / 2 - inventory_width / 2;
-var position_y = camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0]) - 54;
+position_x = camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]) / 2 - inventory_width / 2;
+position_y = camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0]) - 54;
 
 draw_sprite_stretched(
     sInventory,
@@ -38,4 +38,9 @@ for (var i = 0; i < item_inventory_length; i += 1)
     } else {
 		instance_deactivate_object(item_inventory_durability_bar[i]);
 	}
+	
+	if (item_inventory[item_inventory_selected] != -1) {
+		draw_text(position_x + inventory_width / 2, position_y - 22, item_inventory_active.item_name);
+	}
 }
+

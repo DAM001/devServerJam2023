@@ -1,5 +1,6 @@
 /// @description Item setup
 item_index = item_stone_sword;
+item_name = "Stone Sword";
 
 usable = true;
 durability = 40;

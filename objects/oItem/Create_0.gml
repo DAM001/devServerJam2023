@@ -3,7 +3,7 @@ item_index = item_none;
 equipped = false;
 item_position_secondary = false;
 
-item_name = "";
+item_name = "Item";
 item_description = "";
 
 // usable items

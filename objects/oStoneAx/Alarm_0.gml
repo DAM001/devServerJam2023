@@ -1,5 +1,6 @@
 /// @description Item setup
 item_index = item_stone_ax;
+item_name = "Stone Ax";
 
 usable = true;
 durability = 40;

@@ -1,5 +1,6 @@
 /// @description Item setup
 item_index = item_wood_ax;
+item_name = "Wood Ax";
 
 usable = true;
 durability = 40;

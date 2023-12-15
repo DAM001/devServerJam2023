@@ -1,5 +1,6 @@
 /// @description Item setup
 item_index = item_wood_sword;
+item_name = "Wood Sword";
 
 usable = true;
 durability = 30;

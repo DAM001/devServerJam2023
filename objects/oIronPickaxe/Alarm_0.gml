@@ -1,5 +1,6 @@
 /// @description Item setup
 item_index = item_iron_pickaxe;
+item_name = "Iron Pickaxe";
 
 usable = true;
 durability = 60;

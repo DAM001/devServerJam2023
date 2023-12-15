@@ -1,5 +1,6 @@
 /// @description Item setup
 item_index = item_rock;
+item_name = "Rock";
 
 usable = true;
 durability = infinity;

@@ -8,8 +8,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "items",
-    "path": "folders/Objects/items.yy",
+    "name": "craftingStations",
+    "path": "folders/Objects/items/craftingStations.yy",
   },
   "parentObjectId": {
     "name": "oItem",

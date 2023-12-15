@@ -1,5 +1,6 @@
 /// @description Item setup
 item_index = item_wood_pickaxe;
+item_name = "Wood Pickaxe";
 
 usable = true;
 durability = 30;

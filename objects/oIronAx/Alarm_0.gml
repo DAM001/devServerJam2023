@@ -1,5 +1,6 @@
 /// @description Item setup
 item_index = item_iron_ax;
+item_name = "Iron Ax";
 
 usable = true;
 durability = 60;
