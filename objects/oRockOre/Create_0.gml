@@ -1,25 +1,12 @@
+/// @description Drop and health settings
+event_inherited();
+
 randomize();
 rock_type = 0;
 rock_type += irandom(2);
+set_max_health(20);
 
-// health
-rock_max_health = 20;
-rock_health = rock_max_health;
-
-damage = function(damage_amount = 0) {	
-    rock_health -= damage_amount;
-	health_bar.set_health(rock_health, rock_max_health);
-	health_bar.set_color(make_color_rgb(255, 0, 0));
-	
-	if (rock_health <= 0) {
-		rock_destroy();
-	}
-	
-	var effect = effect_create_above(ef_spark, x, y, 1, c_white);
-}
-
-rock_destroy = function() {
-	//create rock resource when destroyed
+create_drop = function() {
 	if (irandom(3) < 3) {
 		instance_create_layer(x, y, 0, oRock);
 	}
@@ -32,27 +19,9 @@ rock_destroy = function() {
 	} else if (rock_type == 2) {
 		create_object(oIronOre);
 	}
-	
-	var effect = effect_create_above(ef_ring, x, y, 0.01, c_white);
-	
-	//destroy related objects
-	instance_destroy(health_bar);
-	instance_destroy(self);
 }
 
-create_object = function(resource_object = noone) {
-	var random_x = x + irandom(20) - 10;
-	var random_y = y + irandom(20) - 10;
-	instance_create_layer(random_x, random_y, 0, resource_object);
-}
-
-// create healthbar
-health_bar = instance_create_layer(x, y, 0, oHealthBar);
-
-alarm[0] = 0.05 * room_speed;
-
-// scale (2 - 3)
-var tree_scale = 2 + irandom(10) / 10;
+// visuals
 image_xscale = 2;
 image_yscale = 2;
 image_speed = 0;

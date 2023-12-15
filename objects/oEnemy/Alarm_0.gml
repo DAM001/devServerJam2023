@@ -1,4 +1,3 @@
-view_distance = grid_size * 10;
+event_inherited();
 
-health_bar.target_object = self;
-health_bar.desired_position_y = 16;
+view_distance = grid_size * 10;

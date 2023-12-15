@@ -250,7 +250,7 @@
     {"id":{"name":"loading_middle3","path":"sounds/loading_middle3/loading_middle3.yy",},},
     {"id":{"name":"sDecorLine","path":"sprites/sDecorLine/sDecorLine.yy",},},
     {"id":{"name":"oMeat","path":"objects/oMeat/oMeat.yy",},},
-    {"id":{"name":"oResource","path":"objects/oResource/oResource.yy",},},
+    {"id":{"name":"oDamageable","path":"objects/oDamageable/oDamageable.yy",},},
     {"id":{"name":"oStick","path":"objects/oStick/oStick.yy",},},
     {"id":{"name":"sIronSword","path":"sprites/sIronSword/sIronSword.yy",},},
     {"id":{"name":"oSlime","path":"objects/oSlime/oSlime.yy",},},

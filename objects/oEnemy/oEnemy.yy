@@ -13,7 +13,10 @@
     "name": "base",
     "path": "folders/Objects/mobs/base.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "oDamageable",
+    "path": "objects/oDamageable/oDamageable.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

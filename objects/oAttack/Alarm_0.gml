@@ -21,7 +21,7 @@ switch (attack_direction) {
 }
 
 // ---------- DAMAGE ----------
-damage_object = function(damage_object_type = oTree, damage_amount = 0) {
+damage_object = function(damage_object_type = noone, damage_amount = 0) {
 	var _list = ds_list_create();
 	var _num = instance_place_list(x, y, damage_object_type, _list, false);
 
@@ -58,11 +58,3 @@ if (!is_object_damaged) {
 	var sounds = [sweep1, sweep2, sweep3, sweep4, sweep5, sweep6, sweep7];
 	audio_play_sound(sounds[irandom(6)], 1, false, .3);
 }
-
-/*if (is_object_damaged == false) {
-	is_object_damaged =  damageObject(oRockOre, attack_mining_damage);
-}
-
-if (is_object_damaged == false) {
-	is_object_damaged =  damageObject(oEnemy, attack_enemy_damage);
-}*/
