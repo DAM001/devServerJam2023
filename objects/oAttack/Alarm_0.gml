@@ -1,22 +1,28 @@
 /// @description Set rotation and do damage
 
+
+
 // Set rotation
 switch (attack_direction) {
     case 0: //right
         image_angle = 0;
 		x += distance_from_player;
+		x_extra = 1;
         break;
     case 1: //left
         image_angle = 180;
 		x -= distance_from_player;
+		x_extra = -1;
         break;
     case 2: //down
         image_angle = 270;
 		y += distance_from_player;
+		y_extra = 1;
         break;
     case 3: //up
         image_angle = 90;
         y -= distance_from_player;
+		y_extra = -1;
 		break;
 }
 

@@ -1,5 +1,7 @@
 event_inherited();
 
+//TODO: handle weapon switch and uneqiup during reload
+
 hide_attack_cooloff = function() {
 	attack_cooloff_bar.set_health(0, attack_cooloff);
 }

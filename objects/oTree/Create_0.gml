@@ -1,7 +1,7 @@
 /// @description Drop and health settings
 event_inherited();
 
-tree_multiply_time = 30;
+tree_multiply_time = 1;
 set_max_health(10);
 
 create_drop = function() {
