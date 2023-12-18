@@ -33,7 +33,12 @@
 #macro item_stone_sword 31
 #macro item_copper_sword 32
 #macro item_iron_sword 33
-#macro item_wood_wall 34
+#macro item_sapphire 34
+#macro item_emerald 35
+#macro item_ruby 36
+#macro item_diamond 37
+#macro item_amethyst 38
+#macro item_wood_wall 39
 
 // list of item sprites
 globalvar item_sprites; 
@@ -73,6 +78,11 @@ item_sprites[item_wood_sword] = sWoodSword;
 item_sprites[item_stone_sword] = sStoneSword;
 item_sprites[item_copper_sword] = sCopperSword;
 item_sprites[item_iron_sword] = sIronSword;
+item_sprites[item_sapphire] = sSapphire;
+item_sprites[item_emerald] = sEmerald;
+item_sprites[item_ruby] = sRuby;
+item_sprites[item_diamond] = sDiamond;
+item_sprites[item_amethyst] = sAmethyst;
 item_sprites[item_wood_wall] = sWoodWall;
 
 // list of item objects
@@ -113,6 +123,11 @@ item_objects[item_wood_sword] = oWoodSword;
 item_objects[item_stone_sword] = oStoneSword;
 item_objects[item_copper_sword] = oCopperSword;
 item_objects[item_iron_sword] = oIronSword;
+item_objects[item_sapphire] = oSapphire;
+item_objects[item_emerald] = oEmerald;
+item_objects[item_ruby] = oRuby;
+item_objects[item_diamond] = oDiamond;
+item_objects[item_amethyst] = oAmethyst;
 item_objects[item_wood_wall] = oWoodWall;
 
 
