@@ -33,6 +33,7 @@
 #macro item_stone_sword 31
 #macro item_copper_sword 32
 #macro item_iron_sword 33
+#macro item_wood_wall 34
 
 // list of item sprites
 globalvar item_sprites; 
@@ -72,6 +73,7 @@ item_sprites[item_wood_sword] = sWoodSword;
 item_sprites[item_stone_sword] = sStoneSword;
 item_sprites[item_copper_sword] = sCopperSword;
 item_sprites[item_iron_sword] = sIronSword;
+item_sprites[item_wood_wall] = sWoodWall;
 
 // list of item objects
 globalvar item_objects; 
@@ -111,6 +113,7 @@ item_objects[item_wood_sword] = oWoodSword;
 item_objects[item_stone_sword] = oStoneSword;
 item_objects[item_copper_sword] = oCopperSword;
 item_objects[item_iron_sword] = oIronSword;
+item_objects[item_wood_wall] = oWoodWall;
 
 
 // CRAFTING RECEPIES

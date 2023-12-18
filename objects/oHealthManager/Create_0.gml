@@ -25,6 +25,9 @@ damage = function() {
 	
 	alarm[0] = .1 * room_speed;
 	highlighted_heart_anim_index = -1;
+	
+	var sounds = [hit1, hit2, hit3];
+	audio_play_sound(sounds[irandom(2)], 1, false, .3);
 }
 
 heal = function() {

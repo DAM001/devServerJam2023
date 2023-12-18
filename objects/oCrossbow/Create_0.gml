@@ -46,3 +46,16 @@ shoot = function() {
 		
 	attack_cooloff_bar.set_health(attack_cooloff_current, attack_cooloff);
 }
+
+check_arrow = function() {
+	for (var i = 0; i < item_inventory_length; i += 1) {
+		if (item_inventory[i] == item_arrow) {
+			item_inventory[i] = -1;
+			item_inventory_items[i] = noone;
+			
+			audio_play_sound(loading_start, 1, false, .3);
+			return true;
+		}
+	}
+	return false;
+}

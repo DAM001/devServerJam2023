@@ -18,6 +18,9 @@ attack_cooloff = 10; // 1 is 100ms
 attack_cooloff_current = 0;
 attack_cooloff_bar = instance_create_layer(x, y, 0, oHealthBar);
 
+// placeable object
+is_placeable = false;
+
 // crafting station
 crafting_station_level = -1;
 
@@ -43,9 +46,15 @@ item_unequip = function() {
 
 	equipped = false;
 	
-	x += irandom(20) - 10;
-	y += irandom(20) - 10;
 	image_xscale = 2;
+	
+	if (is_placeable) {
+		x = round(x / grid_size) * grid_size;
+		y = round(y / grid_size) * grid_size;
+	} else {
+		x += irandom(20) - 10;
+		y += irandom(20) - 10;
+	}
 }
 
 item_hide = function() {

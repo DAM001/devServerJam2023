@@ -8,8 +8,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "items",
-    "path": "folders/Objects/items.yy",
+    "name": "resources",
+    "path": "folders/Objects/items/resources.yy",
   },
   "parentObjectId": {
     "name": "oItem",

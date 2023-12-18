@@ -3,14 +3,14 @@
             "containerId": "materials",
             "index": 0,
             "imagePath": "sItem",
-            "description": "A placeholder item for development only, this should not appear in the game",
+            "description": "It's like Schrödinger's item - exists for devs, but also doesn't in game.",
             "howToGet": "You cant get this item"
         },
         {
             "containerId": "materials",
             "index": 1,
             "imagePath": "sStick",
-            "description": "A crafting resource, used for most of the tools",
+            "description": "The ultimate crafting Swiss Army knife.",
             "resource": ["sTorch", "sWoodPickaxe", "sWoodAx", "sWoodSword", "sStonePickaxe", "sStoneAx", "sStoneSword", "sCopperPickaxe", "sCopperAx", "sCopperSword", "sIronPickaxe", "sIronAx", "sIronSword"],
             "howToGet": "Spawns randomly on the ground; Trees drop when chopped (50% chance)"
         },
@@ -18,7 +18,7 @@
             "containerId": "tools",
             "index": 2,
             "imagePath": "sRock",
-            "description": "The basic starter tool! And a crafting resource, mainly used for the stone tools.",
+            "description": "The OG starter tool! It's like the 'Hello World' of crafting, but way cooler.",
             "stats": [" Durability: unbreakable", " Cooldown: 1.0 (sec)", " Enemy damage: 1.0 (dmg)", " Mining damage: 0.5 (dmg)", " Tree damage: 1.0 (dmg)"],
             "resource": ["sStonePickaxe", "sStoneAx", "sStoneSword", "sFurnace", "sArrow"],
             "howToGet": "Spawns randomly on the ground; Stone with ores drops when mined (75% chance)"
@@ -27,7 +27,7 @@
             "containerId": "materials",
             "index": 3,
             "imagePath": "sWood",
-            "description": "A crafting resource, gained from trees",
+            "description": "The original tree-hugger's loot! Chop, chop, and you've got your crafting dreams in the bag. Just remember, trees have feelings too... just kidding!",
             "resource": ["sWoodPickaxe", "sWoodAx", "sWoodSword", "sCraftingTable"],
             "howToGet": "Dropped by trees when chopped"
         },
@@ -35,7 +35,7 @@
             "containerId": "food-source",
             "index": 4,
             "imagePath": "sGrass",
-            "description": "An easily accessable food source",
+            "description": "The salad of survival! Pluck it from the earth, chew on nature's greens, and keep those hunger pangs at bay.",
             "stats": ["Hunger: +1"],
             "howToGet": "Randomly spawns on the ground"
         },
@@ -43,7 +43,7 @@
             "containerId": "food-source",
             "index": 5,
             "imagePath": "sRawMeat",
-            "description": "Food dropped by living creatures. Can be improved",
+            "description": "Dinner straight from the wild side. Snagged from animals or enemies, this raw treat awaits your culinary mastery or a daring taste test!",
             "stats": ["Hunger: +2"],
             "howToGet": ["Dropped by living creatures after killing them"]
         },
@@ -51,7 +51,7 @@
             "containerId": "food-source",
             "index": 6,
             "imagePath": "sMeat",
-            "description": "Cooked Raw Meat",
+            "description": "From raw to righteous! Savor the flavor and mend your wounds with this tasty, dual-purpose delight. Chow down and recharge!",
             "stats": ["Hunger: +5"],
             "crafting": [
                 ["sFurnace", "2"],
@@ -63,7 +63,7 @@
             "containerId": "materials",
             "index": 7,
             "imagePath": "sString",
-            "description": "Long and strong thin item, useful for making ranged weapons",
+            "description": "The Elon Musk of ranged weapon parts: long, strong, and aimed for the stars!",
             "resource": ["sBow", "sCrossbow"],
             "howToGet": ["Kill enemy mobs"]
         },
@@ -71,7 +71,7 @@
             "containerId": "materials",
             "index": 8,
             "imagePath": "sCoal",
-            "description": "Dark material with high flammability",
+            "description": "The edgy choice for pyromaniacs. Dark as your soul, and just as flammable!",
             "resource": ["sTorch", "sCopperBar", "sIronBar", "sMeat"],
             "howToGet": ["Mine Rock"]
         },
@@ -79,7 +79,7 @@
             "containerId": "materials",
             "index": 9,
             "imagePath": "sCopperOre",
-            "description": "description",
+            "description": "Mine this fiery nugget, melt it down, and voila! You've got the bling for crafting some serious copper tools. Bling bling, miner's thing!",
             "resource": ["sCopperBar"],
             "howToGet": ["Mine Stone with a Stone Pickaxe or better"]
         },
@@ -87,7 +87,7 @@
             "containerId": "materials",
             "index": 10,
             "imagePath": "sCopperBar",
-            "description": "description",
+            "description": "The metal of choice for crafting tools that scream 'copper-tunity!' Heat it up, shape it, and become a copper maestro.",
             "resource": ["sCopperAnvil", "sCrossbow", "sCopperPickaxe", "sCopperAx", "sCopperSword"],
             "crafting": [
                 ["sFurnace", "2"],
@@ -99,7 +99,7 @@
             "containerId": "materials",
             "index": 11,
             "imagePath": "sIronOre",
-            "description": "description",
+            "description": "Dig deep, strike gold...well, iron, actually. Melt it down, and you're on your way to crafting iron-clad awesomeness!",
             "resource": ["sIronBar"],
             "howToGet": ["Mine Stone with a Copper Pickaxe or better"]
         },
@@ -107,7 +107,7 @@
             "containerId": "materials",
             "index": 12,
             "imagePath": "sIronBar",
-            "description": "description",
+            "description": "For crafting that's as solid as iron. Heat it up, forge the future, and create the toughest of tools and items.",
             "resource": ["sIronAnvil", "sIronPickaxe", "sIronAx", "sIronSword"],
             "crafting": [
                 ["sFurnace", "2"],
@@ -119,7 +119,7 @@
             "containerId": "tools",
             "index": 13,
             "imagePath": "sTorch",
-            "description": "It provides light for the dark nights. Defensive item, it can scare enemy monsters!",
+            "description": "Shedding light in the darkest corners, and making monsters think twice about crashing your party. It's lit!",
             "stats": [" Durability: 40 (hit)"],
             "crafting": [
                 ["sPlayer", "0"],
@@ -131,7 +131,7 @@
             "containerId": "tools",
             "index": 14,
             "imagePath": "sCampfire",
-            "description": "description",
+            "description": "Your guiding light and ultimate respawn spot. One campfire to rule them all – the heart of your adventure, both a beacon of hope and a healing oasis.",
             "crafting": [
                 ["sPlayer", "0"],
                 ["sCoal", "1"],
@@ -142,7 +142,7 @@
             "containerId": "Crafting Table",
             "index": 15,
             "imagePath": "sCraftingTable",
-            "description": "Crafting station for making basic tools and more advanced crafting stations",
+            "description": "The workbench of champions! Where basic tools come to life with a dash of creativity and a sprinkle of crafting magic.",
             "crafting": [
                 ["sPlayer", "0"],
                 ["sWood", "4"]
@@ -152,7 +152,7 @@
             "containerId": "Furnace",
             "index": 16,
             "imagePath": "sFurnace",
-            "description": "Crafting station for materials witch require heat",
+            "description": "Turns raw materials into sizzling goodness. Whether it's melting ore or cooking a hearty meal, this fiery friend's got you covered!",
             "crafting": [
                 ["sCraftingTable", "1"],
                 ["sRock", "4"]
@@ -162,7 +162,7 @@
             "containerId": "Copper Anvil",
             "index": 17,
             "imagePath": "sCopperAnvil",
-            "description": "Crafting station for advanced items made from copper",
+            "description": "Crafting meets the copper age! Forge advanced copper tools that are sharper, stronger, and ready to conquer the world.",
             "crafting": [
                 ["sCraftingTable", "1"],
                 ["sCopperBar", "4"]
@@ -172,7 +172,7 @@
             "containerId": "Iron Anvil",
             "index": 18,
             "imagePath": "sIronAnvil",
-            "description": "Crafting station for advanced items made from iron",
+            "description": "For the serious blacksmith in you. Forge advanced iron tools that are as tough as you are, and conquer your crafting quests!",
             "crafting": [
                 ["sCraftingTable", "1"],
                 ["sIronBar", "4"]
@@ -182,7 +182,7 @@
             "containerId": "materials",
             "index": 19,
             "imagePath": "sArrow",
-            "description": "Ammunition for range weapons (Bow, Crossbow)",
+            "description": "Your trusty wingman for long-range mayhem. Load it into your bow or crossbow, aim true, and let it fly to the heart of your foes.",
             "crafting": [
                 ["sCraftingTable", "1"],
                 ["sRock", "1"],
@@ -193,7 +193,7 @@
             "containerId": "tools",
             "index": 20,
             "imagePath": "sBow",
-            "description": "Weak range weapon, useful for killing enemies from a distance",
+            "description": "Silent but deadly! The bow, your trusty ranged companion, delivers arrows of doom to targets near and far.",
             "stats": [" Durability: 40 (shots)", " Charge: 0.7 (sec)", "Range: 10 (tiles)", " Enemy damage: 4 (dmg)"],
             "crafting": [
                 ["sCraftingTable", "1"],
@@ -206,7 +206,7 @@
             "containerId": "tools",
             "index": 21,
             "imagePath": "sCrossbow",
-            "description": "Strong range weapon, useful for killing enemies from a distance",
+            "description": "A mechanical marvel for the silent but deadly marksman! Deliver arrows of doom to targets near and far with precision and power.",
             "stats": [" Durability: 60 (shots)", " Charge: 1.0 (sec)", "Range: 15 (tiles)", " Enemy damage: 7 (dmg)"],
             "crafting": [
                 ["sCraftingTable", "1"],
@@ -219,7 +219,7 @@
             "containerId": "tools",
             "index": 22,
             "imagePath": "sWoodPickaxe",
-            "description": "A tool for mining stones and ores",
+            "description": "Begin your mining journey with this basic pickaxe, the first step in unearthing treasures from the earth.",
             "stats": [" Durability: 30 (hit)", " Cooldown: 1.0 (sec)", " Enemy damage: 1 (dmg)", " Mining damage: 2 (dmg)", " Tree damage: 1 (dmg)"],
             "crafting": [
                 ["sCraftingTable", "1"],
@@ -231,7 +231,7 @@
             "containerId": "tools",
             "index": 23,
             "imagePath": "sStonePickaxe",
-            "description": "A tool for mining stones and ores",
+            "description": "This stone pickaxe offers improved efficiency, allowing you to dig deeper and discover more valuable resources.",
             "stats": [" Durability: 40 (hit)", " Cooldown: 0.8 (sec)", " Enemy damage: 1 (dmg)", " Mining damage: 3 (dmg)", " Tree damage: 1 (dmg)"],
             "crafting": [
                 ["sCraftingTable", "1"],
@@ -243,7 +243,7 @@
             "containerId": "tools",
             "index": 24,
             "imagePath": "sCopperPickaxe",
-            "description": "A tool for mining stones and ores",
+            "description": "Upgrade to the copper pickaxe for enhanced durability and mining speed, making your mining endeavors more rewarding.",
             "stats": [" Durability: 50 (hit)", " Cooldown: 0.6 (sec)", " Enemy damage: 1 (dmg)", " Mining damage: 4 (dmg)", " Tree damage: 1 (dmg)"],
             "crafting": [
                 ["sCraftingTable", "1"],
@@ -255,7 +255,7 @@
             "containerId": "tools",
             "index": 25,
             "imagePath": "sIronPickaxe",
-            "description": "A tool for mining stones and ores",
+            "description": "The iron pickaxe, the ultimate mining tool, grants you unparalleled strength and efficiency as you unearth the most valuable treasures hidden deep below.",
             "stats": [" Durability: 60 (hit)", " Cooldown: 0.4 (sec)", " Enemy damage: 1 (dmg)", " Mining damage: 5 (dmg)", " Tree damage: 1 (dmg)"],
             "crafting": [
                 ["sCraftingTable", "1"],
@@ -267,7 +267,7 @@
             "containerId": "tools",
             "index": 26,
             "imagePath": "sWoodAx",
-            "description": "An item made for gathering wood resources efficiently",
+            "description": "A basic wooden axe, perfect for getting started with chopping wood and gathering resources.",
             "stats": [" Durability: 30 (hit)", " Cooldown: 1.0 (sec)", " Enemy damage: 1 (dmg)", " Mining damage: 1 (dmg)", " Tree damage: 2 (dmg)"],
             "crafting": [
                 ["sCraftingTable", "1"],
@@ -279,7 +279,7 @@
             "containerId": "tools",
             "index": 27,
             "imagePath": "sStoneAx",
-            "description": "An item made for gathering wood resources efficiently",
+            "description": "A stone axe, offering improved efficiency and strength for faster woodcutting and resource gathering.",
             "stats": [" Durability: 40 (hit)", " Cooldown: 0.8 (sec)", " Enemy damage: 1 (dmg)", " Mining damage: 1 (dmg)", " Tree damage: 3 (dmg)"],
             "crafting": [
                 ["sCraftingTable", "1"],
@@ -291,7 +291,7 @@
             "containerId": "tools",
             "index": 28,
             "imagePath": "sCopperAx",
-            "description": "An item made for gathering wood resources efficiently",
+            "description": "Upgrade to a copper axe, enhancing your woodcutting prowess and making resource gathering a breeze.",
             "stats": [" Durability: 50 (hit)", " Cooldown: 0.6 (sec)", " Enemy damage: 1 (dmg)", " Mining damage: 1 (dmg)", " Tree damage: 4 (dmg)"],
             "crafting": [
                 ["sCraftingTable", "1"],
@@ -303,7 +303,7 @@
             "containerId": "tools",
             "index": 29,
             "imagePath": "sIronAx",
-            "description": "An item made for gathering wood resources efficiently",
+            "description": "The iron axe, the ultimate woodcutter's tool, delivers unmatched strength and efficiency, allowing you to harvest resources with ease.",
             "stats": [" Durability: 60 (hit)", " Cooldown: 0.4 (sec)", " Enemy damage: 1 (dmg)", " Mining damage: 1 (dmg)", " Tree damage: 5 (dmg)"],
             "crafting": [
                 ["sCraftingTable", "1"],
@@ -315,7 +315,7 @@
             "containerId": "tools",
             "index": 30,
             "imagePath": "sWoodSword",
-            "description": "A tool for fighting against living creatures",
+            "description": "A basic wooden sword, your first line of defense against the creatures of the world.",
             "stats": [" Durability: 30 (hit)", " Cooldown: 1.0 (sec)", " Enemy damage: 2 (dmg)", " Mining damage: 1 (dmg)", " Tree damage: 1 (dmg)"],
             "crafting": [
                 ["sCraftingTable", "1"],
@@ -327,7 +327,7 @@
             "containerId": "tools",
             "index": 31,
             "imagePath": "sStoneSword",
-            "description": "A tool for fighting against living creatures",
+            "description": "A stone sword, offering improved strength and durability for better protection and combat.",
             "stats": [" Durability: 40 (hit)", " Cooldown: 0.8 (sec)", " Enemy damage: 3 (dmg)", " Mining damage: 1 (dmg)", " Tree damage: 1 (dmg)"],
             "crafting": [
                 ["sCraftingTable", "1"],
@@ -339,7 +339,7 @@
             "containerId": "tools",
             "index": 32,
             "imagePath": "sCopperSword",
-            "description": "A tool for fighting against living creatures",
+            "description": "Upgrade to a copper sword, increasing your combat prowess and ensuring you can face foes with confidence.",
             "stats": [" Durability: 50 (hit)", " Cooldown: 0.6 (sec)", " Enemy damage: 4 (dmg)", " Mining damage: 1 (dmg)", " Tree damage: 1 (dmg)"],
             "crafting": [
                 ["sCraftingTable", "1"],
@@ -351,13 +351,48 @@
             "containerId": "tools",
             "index": 33,
             "imagePath": "sIronSword",
-            "description": "A tool for fighting against living creatures",
+            "description": "The iron sword, the ultimate weapon, delivers unmatched power and precision, making you a formidable force in battle.",
             "stats": [" Durability: 60 (hit)", " Cooldown: 0.4 (sec)", " Enemy damage: 5 (dmg)", " Mining damage: 1 (dmg)", " Tree damage: 1 (dmg)"],
             "crafting": [
                 ["sCraftingTable", "1"],
                 ["sIronBar", "2"],
                 ["sStick", "1"]
             ]
+        },
+        {
+            "containerId": "gems",
+            "index": 34,
+            "imagePath": "sSapphire",
+            "description": "Blue like the 'Loading...' screen, this sapphire's got the backstage pass to the homeworld. It's basically the VIP ticket of gems.",
+            "howToGet": "Kill enemy mobs"
+        },
+        {
+            "containerId": "gems",
+            "index": 35,
+            "imagePath": "sEmerald",
+            "description": "Green like the envy of all other gems, this emerald's the real MVP. It's the key to unlocking the homeworld's ultimate boss level.",
+            "howToGet": "Kill enemy mobs"
+        },
+        {
+            "containerId": "gems",
+            "index": 36,
+            "imagePath": "sRuby",
+            "description": "Red like the warning sign for epic adventures, this ruby's your signal to 'press start.' It's the secret sauce for portal magic.",
+            "howToGet": "Kill enemy mobs"
+        },
+        {
+            "containerId": "gems",
+            "index": 37,
+            "imagePath": "sDiamond",
+            "description": "White like the blank canvas of possibilities, this diamond's the artist's dream. It's the pixel-perfect code to open the homeworld portal.",
+            "howToGet": "Kill enemy mobs"
+        },
+        {
+            "containerId": "gems",
+            "index": 38,
+            "imagePath": "sAmethyst",
+            "description": "Purple like your character's epic robe, this amethyst is the grand finale. It's the meme generator for the ultimate homeworld reveal.",
+            "howToGet": "Kill enemy mobs"
         }
     ]
 }
