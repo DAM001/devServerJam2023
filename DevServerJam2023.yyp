@@ -153,6 +153,7 @@
     {"id":{"name":"sweep4","path":"sounds/sweep4/sweep4.yy",},},
     {"id":{"name":"shoot1","path":"sounds/shoot1/shoot1.yy",},},
     {"id":{"name":"oCopperOre","path":"objects/oCopperOre/oCopperOre.yy",},},
+    {"id":{"name":"oExplotion","path":"objects/oExplotion/oExplotion.yy",},},
     {"id":{"name":"sEquipIndicator","path":"sprites/sEquipIndicator/sEquipIndicator.yy",},},
     {"id":{"name":"oMusicManager","path":"objects/oMusicManager/oMusicManager.yy",},},
     {"id":{"name":"oHealthBar","path":"objects/oHealthBar/oHealthBar.yy",},},

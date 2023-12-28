@@ -123,6 +123,7 @@
     {"name":"sweep4","order":11,"path":"sounds/sweep4/sweep4.yy",},
     {"name":"shoot1","order":6,"path":"sounds/shoot1/shoot1.yy",},
     {"name":"oCopperOre","order":4,"path":"objects/oCopperOre/oCopperOre.yy",},
+    {"name":"oExplotion","order":1,"path":"objects/oExplotion/oExplotion.yy",},
     {"name":"sEquipIndicator","order":6,"path":"sprites/sEquipIndicator/sEquipIndicator.yy",},
     {"name":"oMusicManager","order":4,"path":"objects/oMusicManager/oMusicManager.yy",},
     {"name":"grass5","order":2,"path":"sounds/grass5/grass5.yy",},
