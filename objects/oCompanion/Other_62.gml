@@ -9,9 +9,13 @@ if (async_load[? "id"] == request_id) // http_id is the id returned by http_post
         var chat_response = json.choices[0].message.content;
 
         // Use chat_response as needed in your game
-		show_message(chat_response);
+		//write_message(chat_response);
     }
     else {
         var status_code = async_load[? "status"];
     }
 }
+
+/*function write_message(var message_content) {
+	draw_text(x, y, message_content);
+}*/

@@ -11,7 +11,7 @@ depth = -1000000;
 request_id = -1;
 
 // Set your API key
-var api_key = "";
+var api_key = "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";
 var message_to = "\"sup m8\"";
 
 // Create a map for the headers
