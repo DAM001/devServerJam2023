@@ -6,7 +6,7 @@ alarm[0] = 1 * room_speed;
 var distance_from_player = point_distance(x, y, oPlayer.x, oPlayer.y);
 if (distance_from_player < explotion_distance) {
 	var health_manager = instance_nearest(x, y, oHealthManager);
-	health_manager.damage();
+	health_manager.damage(2);
 }
 
 // visuals

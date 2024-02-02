@@ -11,7 +11,7 @@ player_invincable_time = 3;
 player_heart_icons = [player_max_health];
 highlighted_heart_anim_index = -1;
 
-damage = function() {
+damage = function(damage_value = 1) {
 	if (player_is_invincable) {
 		return;
 	} else {
@@ -20,7 +20,7 @@ damage = function() {
 	}
 	
 	if (player_current_health > 0) {
-		player_current_health--;
+		player_current_health -= damage_value;
 	}
 	
 	alarm[0] = .1 * room_speed;
@@ -30,9 +30,9 @@ damage = function() {
 	audio_play_sound(sounds[irandom(2)], 1, false, .3);
 }
 
-heal = function() {
+heal = function(heal_value = 1) {
 	if (player_current_health < player_max_health) {
-		player_current_health++;
+		player_current_health += heal_value;
 	}
 
 	alarm[1] = .1 * room_speed;
